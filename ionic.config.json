@@ -1,0 +1,7 @@
+{
+  "name": "energywise-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
