@@ -6,6 +6,7 @@ interface ItemBase {
 
 export interface ChargingKit extends ItemBase {
   priceRange: [number, number];
+  provider: string;
   energy: ChargingKitEnergy;
   size: ChargingKitSize;
   purchaseLink: string;

@@ -7,40 +7,83 @@ import {
   IonItem,
   IonButton,
   IonText,
+  IonIcon,
+  IonGrid,
+  IonCol,
+  IonRow,
+  IonImg,
+  IonChip,
 } from "@ionic/react";
+import { ChargingKit } from "../types";
+import { batteryCharging } from "ionicons/icons";
 
-interface ChargingKitItemProps {
-  name: string;
-  icon: string;
-  priceRange: [number, number];
-  power: string;
-}
+type ChargingKitItemProps = ChargingKit;
 
 const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
   props
 ) => {
   return (
     <IonItem>
+      {/* todo: make the card size stretch across the page (fixed width) */}
       <IonCard>
-        <IonCardHeader>
-          <IonCardTitle>{props.itemData.name}</IonCardTitle>
-          <IonCardSubtitle>{props.itemData.power} Watts</IonCardSubtitle>
-        </IonCardHeader>
+        <IonGrid>
+          <IonRow>
+            <IonCol>
+              <IonRow>
+                <IonCardHeader>
+                  <p>Must buy!</p>
+                  <IonCardTitle>{props.itemData.name}</IonCardTitle>
+                  <IonCardSubtitle>
+                    <div>
+                      <IonIcon icon={batteryCharging} color="primary" />
+                      {props.itemData.energy.wattage} Watts
+                    </div>
+                  </IonCardSubtitle>
+                </IonCardHeader>
+              </IonRow>
+              <IonRow>
+                <IonCardContent>
+                  <IonText color="primary">
+                    <h2>
+                      {props.itemData.priceRange[0]} ~{" "}
+                      {props.itemData.priceRange[1]} EUR
+                    </h2>
+                  </IonText>
+                  <div>
+                    {props.itemData.features.map((i) => <IonChip color="primary">{i}</IonChip>)}
+                  </div>
+                  <IonText color="secondary">
+                    <p>
+                      {props.itemData.description ||
+                        "No description for this item."}
+                    </p>
+                  </IonText>
+                </IonCardContent>
+              </IonRow>
+            </IonCol>
 
-        <IonCardContent>
-          <IonText color="primary">
-            <h2>
-              {props.itemData.priceRange[0]} ~ {props.itemData.priceRange[1]} EUR
-            </h2>
-          </IonText>
-          <IonText color="secondary">
-            <p>
-              Here's a small text description for the card content. Nothing
-              more, nothing less.
-            </p>
-          </IonText>
-        </IonCardContent>
-        <IonButton>Purchase</IonButton>
+            <IonCol>
+              {/* todo: adjust image size */}
+              <IonImg
+                src="https://docs-demo.ionic.io/assets/madison.jpg"
+                alt="The Wisconsin State Capitol building in Madison, WI at night"
+              ></IonImg>
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
+              <IonButton
+                onClick={() => {
+                  console.log(
+                    "Going to the details page for " + props.itemData.name
+                  );
+                }}
+              >
+                Details
+              </IonButton>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
       </IonCard>
     </IonItem>
   );

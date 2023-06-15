@@ -5,9 +5,10 @@ export const mockChargingStation: ChargingKit[] = [
     name: "Hello world",
     icon: "hey",
     purchaseLink: '',
+    provider: '',
     description: 'This is the best charging station kit you can ever find.',
     features: ['bluetooth', 'wireless', 'wlan', '4g'],
-    priceRange: [30.5, 69] as [number, number],
+    priceRange: [30.5, 69],
     energy: {
       wattage: 300,
       voltage: 2,
@@ -24,9 +25,10 @@ export const mockChargingStation: ChargingKit[] = [
     name: "Hello world 2",
     icon: "hey",
     purchaseLink: '',
+    provider: '',
     description: '',
     features: [],
-    priceRange: [30.5, 69] as [number, number],
+    priceRange: [30.5, 69],
     energy: {
       wattage: 300,
       voltage: 2,
