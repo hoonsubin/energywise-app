@@ -2,7 +2,6 @@ import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/r
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
-import Page from './pages/Page';
 import ChargingKitListPage from './pages/ChargingKitListPage';
 import TechnicianListPage from './pages/TechnicianListPage';
 import SurveyPage from './pages/SurveyPage';
@@ -41,6 +40,10 @@ const App: React.FC = () => {
             <Route path="/station" exact={true}>
               <ChargingKitListPage />
             </Route>
+            <Route path="/station/:id" exact={true}>
+
+            </Route>
+
             {/* todo: need to create all pages */}
             <Route path="/survey" exact={true}>
               <SurveyPage />
@@ -48,10 +51,6 @@ const App: React.FC = () => {
             <Route path="/technicians" exact={true}>
               <TechnicianListPage />
             </Route>
-            {/* todo: change this to item detail page based on the item id */}
-            {/* <Route path="/:name" exact={true}>
-              <Page />
-            </Route> */}
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
