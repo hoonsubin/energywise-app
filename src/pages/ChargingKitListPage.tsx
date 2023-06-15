@@ -11,12 +11,23 @@ import {
   IonLabel,
 } from "@ionic/react";
 import ChargingKitItem from "../components/ChargingKitItem";
-
 import { mockChargingStation } from "../data/mock";
+import { useMemo } from "react";
+
+type ChargingKitListPageProps = {
+  filters?: string[];
+};
 
 const pageName = "EV Stations";
 
-const ChargingKitListPage: React.FC = () => {
+// todo: create a function that uses the `filters` prop to filter the results.
+
+const ChargingKitListPage: React.FC<ChargingKitListPageProps> = (props) => {
+  const stationData = useMemo(() => {
+    // todo: refactor this fetch data remotely or from a full dataset.
+    return mockChargingStation;
+  }, []);
+
   return (
     <IonPage>
       <IonHeader>
@@ -39,7 +50,7 @@ const ChargingKitListPage: React.FC = () => {
             <IonLabel>Choose your Offer</IonLabel>
           </IonListHeader>
           {/* todo: add item filtering based on keywords and tags */}
-          {mockChargingStation.map((i) => (
+          {stationData.map((i) => (
             <ChargingKitItem itemData={i} key={i.description} />
           ))}
         </IonList>

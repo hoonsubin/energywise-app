@@ -76,6 +76,15 @@ const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
                         "No description for this item."}
                     </p>
                   </IonText>
+                  <IonButton
+                    onClick={() => {
+                      console.log(
+                        "Going to the details page for " + props.itemData.name
+                      );
+                    }}
+                  >
+                    Details
+                  </IonButton>
                 </IonCardContent>
               </IonRow>
             </IonCol>
@@ -86,19 +95,6 @@ const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
                 src="https://docs-demo.ionic.io/assets/madison.jpg"
                 alt="The Wisconsin State Capitol building in Madison, WI at night"
               ></IonImg>
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol>
-              <IonButton
-                onClick={() => {
-                  console.log(
-                    "Going to the details page for " + props.itemData.name
-                  );
-                }}
-              >
-                Details
-              </IonButton>
             </IonCol>
           </IonRow>
         </IonGrid>

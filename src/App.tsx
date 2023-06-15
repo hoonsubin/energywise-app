@@ -4,6 +4,8 @@ import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import Page from './pages/Page';
 import ChargingKitListPage from './pages/ChargingKitListPage';
+import TechnicianListPage from './pages/TechnicianListPage';
+import SurveyPage from './pages/SurveyPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -41,10 +43,10 @@ const App: React.FC = () => {
             </Route>
             {/* todo: need to create all pages */}
             <Route path="/survey" exact={true}>
-              <ChargingKitListPage />
+              <SurveyPage />
             </Route>
             <Route path="/technicians" exact={true}>
-              <ChargingKitListPage />
+              <TechnicianListPage />
             </Route>
             {/* todo: change this to item detail page based on the item id */}
             {/* <Route path="/:name" exact={true}>
