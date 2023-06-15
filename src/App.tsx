@@ -3,6 +3,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import Page from './pages/Page';
+import ChargingKitListPage from './pages/ChargingKitListPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -32,10 +33,15 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
+            {/* todo: create all menu pages */}
             <Route path="/" exact={true}>
-              <Redirect to="/folder/Inbox" />
+              <Redirect to="/station" />
             </Route>
-            <Route path="/folder/:name" exact={true}>
+            <Route path="/station" exact={true}>
+              <ChargingKitListPage />
+            </Route>
+            {/* todo: change this to item detail page based on the item id */}
+            <Route path="/app/:name" exact={true}>
               <Page />
             </Route>
           </IonRouterOutlet>

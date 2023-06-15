@@ -1,6 +1,6 @@
 {
-  "short_name": "Ionic App",
-  "name": "My Ionic App",
+  "short_name": "energywise",
+  "name": "energywise | Charging station at your fingertips",
   "icons": [
     {
       "src": "assets/icon/favicon.png",
