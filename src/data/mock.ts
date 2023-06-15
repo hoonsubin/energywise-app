@@ -2,22 +2,24 @@ import { ChargingKit } from "../types";
 
 export const mockChargingStation: ChargingKit[] = [
   {
-    name: "Hello world",
+    name: "Terra AC Wallbox",
     icon: "hey",
     purchaseLink: '',
-    provider: '',
+    provider: 'ABB Ltd',
     description: 'This is the best charging station kit you can ever find.',
     features: ['bluetooth', 'wireless', 'wlan', '4g'],
     priceRange: [30.5, 69],
     energy: {
-      wattage: 300,
+      power: 300,
       voltage: 2,
       amperage: 200,
     },
     size: {
-      height: 4,
-      width: 5,
+      height: 320,
+      width: 195,
+      depth: 143,
       weight: 30,
+      
       cableLength: [15, 30],
     },
   },
@@ -30,7 +32,7 @@ export const mockChargingStation: ChargingKit[] = [
     features: [],
     priceRange: [30.5, 69],
     energy: {
-      wattage: 300,
+      power: 300,
       voltage: 2,
       amperage: 200,
     },
@@ -38,6 +40,7 @@ export const mockChargingStation: ChargingKit[] = [
       height: 4,
       width: 5,
       weight: 30,
+      depth: 20,
       cableLength: [15, 30],
     },
   },

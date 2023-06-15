@@ -33,17 +33,23 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
-            {/* todo: create all menu pages */}
             <Route path="/" exact={true}>
               <Redirect to="/station" />
             </Route>
             <Route path="/station" exact={true}>
               <ChargingKitListPage />
             </Route>
-            {/* todo: change this to item detail page based on the item id */}
-            <Route path="/app/:name" exact={true}>
-              <Page />
+            {/* todo: need to create all pages */}
+            <Route path="/survey" exact={true}>
+              <ChargingKitListPage />
             </Route>
+            <Route path="/technicians" exact={true}>
+              <ChargingKitListPage />
+            </Route>
+            {/* todo: change this to item detail page based on the item id */}
+            {/* <Route path="/:name" exact={true}>
+              <Page />
+            </Route> */}
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>

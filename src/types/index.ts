@@ -14,7 +14,7 @@ export interface ChargingKit extends ItemBase {
 }
 
 export interface ChargingKitEnergy {
-  wattage: number;
+  power: number;
   voltage: number;
   amperage: number;
 }
@@ -23,6 +23,7 @@ export interface ChargingKitSize {
   height: number;
   width: number;
   weight: number;
+  depth: number;
   cableLength: number[];
 }
 
