@@ -10,6 +10,7 @@ import Menu from "./components/Menu";
 import ChargingKitListPage from "./pages/ChargingKitListPage";
 import TechnicianListPage from "./pages/TechnicianListPage";
 import SurveyPage from "./pages/SurveyPage";
+import ChargingKitDetailPage from './pages/ChargingKitDetailPage';
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -37,23 +38,27 @@ const App: React.FC = () => {
     <IonApp>
       <IonReactRouter>
         <IonSplitPane contentId="main">
+          {/* Always show the menu on the side of the app */}
           <Menu />
+          {/* Route the pages based on the URL */}
           <IonRouterOutlet id="main">
-            <Route path="/" exact={true}>
+            {/* Default page. todo: this should be changed to the survey page for production */}
+            <Route path="/" exact>
               <Redirect to="/station" />
             </Route>
-            <Route path="/station" exact={true}>
+            <Route path="/station" exact>
               <ChargingKitListPage />
             </Route>
-            <Route path="/station/:id" exact={true}>
+            <Route path="/station/detail/:id" >
+              <ChargingKitDetailPage />
               {/* todo: add the details page */}
             </Route>
 
             {/* todo: need to create all pages */}
-            <Route path="/survey" exact={true}>
+            <Route path="/survey" exact>
               <SurveyPage />
             </Route>
-            <Route path="/technicians" exact={true}>
+            <Route path="/technicians" exact>
               <TechnicianListPage />
             </Route>
           </IonRouterOutlet>

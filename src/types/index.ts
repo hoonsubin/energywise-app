@@ -1,4 +1,5 @@
 interface ItemBase {
+    id?: number;
     name: string;
     icon?: string;
     description: string;

@@ -1,6 +1,6 @@
 import { ChargingKit } from "../types";
 
-export const mockChargingStation: ChargingKit[] = [
+const mockChargingStation: ChargingKit[] = [
   {
     name: "Terra AC Wallbox",
     icon: "hey",
@@ -67,3 +67,10 @@ export const mockChargingStation: ChargingKit[] = [
     },
   }
 ];
+
+export const mockChargingStationData = mockChargingStation.map((i, index) => {
+  return {
+    id: index,
+    ...i
+  }
+})

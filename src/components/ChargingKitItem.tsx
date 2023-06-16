@@ -77,11 +77,7 @@ const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
                     </p>
                   </IonText>
                   <IonButton
-                    onClick={() => {
-                      console.log(
-                        "Going to the details page for " + props.itemData.name
-                      );
-                    }}
+                    routerLink={"/station/detail/" + props.itemData.id}
                   >
                     Details
                   </IonButton>
