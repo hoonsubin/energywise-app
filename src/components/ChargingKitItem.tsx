@@ -76,17 +76,20 @@ const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
                         "No description for this item."}
                     </p>
                   </IonText>
-                  <IonButton
-                    routerLink={"/station/detail/" + props.itemData.id}
-                  >
-                    Details
-                  </IonButton>
                 </IonCardContent>
               </IonRow>
+              <IonButton
+                shape="round"
+                size="large"
+                fill="outline"
+                routerLink={"/station/detail/" + props.itemData.id}
+              >
+                Details
+              </IonButton>
             </IonCol>
 
             <IonCol>
-              {/* todo: adjust image size */}
+              {/* todo: fix the image size and position so it's fluid */}
               <IonImg
                 src="https://docs-demo.ionic.io/assets/madison.jpg"
                 alt="The Wisconsin State Capitol building in Madison, WI at night"
