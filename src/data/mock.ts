@@ -3,7 +3,7 @@ import { ChargingKit } from "../types";
 const mockChargingStation: ChargingKit[] = [
   {
     name: "Terra AC Wallbox",
-    icon: "hey",
+    image: "https://docs-demo.ionic.io/assets/madison.jpg",
     purchaseLink: '',
     provider: 'ABB Ltd',
     description: 'This is the best charging station kit you can ever find.',
@@ -25,7 +25,7 @@ const mockChargingStation: ChargingKit[] = [
   },
   {
     name: "Hello world 2",
-    icon: "hey",
+    image: "https://docs-demo.ionic.io/assets/madison.jpg",
     purchaseLink: '',
     provider: '',
     description: '',
@@ -46,7 +46,7 @@ const mockChargingStation: ChargingKit[] = [
   },
   {
     name: "Terra AC Wallbox",
-    icon: "hey",
+    image: "https://docs-demo.ionic.io/assets/madison.jpg",
     purchaseLink: '',
     provider: 'ABB Ltd',
     description: 'This is the best charging station kit you can ever find.',

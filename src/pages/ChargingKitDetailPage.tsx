@@ -7,13 +7,11 @@ import {
   IonTitle,
   IonToolbar,
   IonLabel,
-  IonIcon,
-  IonButton,
 } from "@ionic/react";
 import { mockChargingStationData } from "../data/mock";
 import { useMemo } from "react";
-import { useParams, useHistory } from "react-router";
-import { arrowBack } from "ionicons/icons";
+import { useParams } from "react-router";
+import BackButton from "../components/BackButton";
 
 type ChargingKitListPageProps = {
   filters?: string[];
@@ -21,26 +19,18 @@ type ChargingKitListPageProps = {
 
 // todo: create a function that uses the `filters` prop to filter the results.
 
-const BackButton = () => {
-  const history = useHistory();
-  return (
-    <IonButton fill="clear" onClick={() => history.go(-1)}>
-      <IonIcon slot="icon-only" icon={arrowBack} />
-    </IonButton>
-  );
-};
-
 const ChargingKitDetailPage: React.FC<ChargingKitListPageProps> = (props) => {
   const { id } = useParams<{ id: string }>();
 
-  const stationData = useMemo(() => {
+  const pageData = useMemo(() => {
     // todo: refactor this fetch data remotely or from a full dataset.
-    return mockChargingStationData;
+    // note: I know this is horrible for performance. But for a static db, it gets the job done.
+    return mockChargingStationData.filter((i) => i.id === parseInt(id))[0];
   }, []);
 
   const pageName = useMemo(() => {
-    return stationData.filter((i) => i.id === parseInt(id))[0].name;
-  }, []);
+    return pageData.name;
+  }, [pageData]);
 
   return (
     <IonPage>

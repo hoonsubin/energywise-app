@@ -1,7 +1,7 @@
 interface ItemBase {
     id?: number;
     name: string;
-    icon?: string;
+    image?: string;
     description: string;
 }
 
