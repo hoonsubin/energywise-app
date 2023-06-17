@@ -81,10 +81,18 @@ const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
               <IonButton
                 shape="round"
                 size="large"
-                fill="outline"
                 routerLink={'/station/detail/' + props.itemData.id}
               >
                 Details
+              </IonButton>
+              <IonButton
+                color="secondary"
+                shape="round"
+                size="large"
+                fill="outline"
+                onClick={() => console.log('going to the technician list page')}
+              >
+                Find Technician
               </IonButton>
             </IonCol>
 

@@ -8,7 +8,7 @@ import {
   IonToolbar,
   IonList,
   IonListHeader,
-  IonLabel,
+  IonText,
 } from '@ionic/react';
 import ChargingKitItem from '../components/ChargingKitItem';
 import { mockChargingStationData } from '../data/mock';
@@ -47,7 +47,9 @@ const ChargingKitListPage: React.FC<ChargingKitListPageProps> = (props) => {
         </IonHeader>
         <IonList>
           <IonListHeader>
-            <IonLabel>Choose your Offer</IonLabel>
+            <IonText>
+              <h2>Choose your Offer</h2>
+            </IonText>
           </IonListHeader>
           {/* todo: add item filtering based on keywords and tags */}
           {stationData.map((i) => (

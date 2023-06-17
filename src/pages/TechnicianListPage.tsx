@@ -10,9 +10,6 @@ import {
   IonListHeader,
   IonLabel,
 } from '@ionic/react';
-import ChargingKitItem from '../components/ChargingKitItem';
-
-import { mockChargingStation } from '../data/mock';
 
 const pageName = 'Technicians';
 
@@ -34,7 +31,7 @@ const TechnicianListPage: React.FC = () => {
             <IonTitle size="large">{pageName}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonLabel>Implement the technician page</IonLabel>
+        <h2>Implement the technician page</h2>
       </IonContent>
     </IonPage>
   );
