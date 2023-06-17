@@ -7,40 +7,101 @@ import {
   IonItem,
   IonButton,
   IonText,
-} from "@ionic/react";
+  IonIcon,
+  IonGrid,
+  IonCol,
+  IonRow,
+  IonImg,
+  IonChip,
+  IonLabel,
+} from '@ionic/react';
+import { ChargingKit } from '../types';
+import { flash, person } from 'ionicons/icons';
 
-interface ChargingKitItemProps {
-  name: string;
-  icon: string;
-  priceRange: [number, number];
-  power: string;
-}
+type ChargingKitItemProps = ChargingKit;
+
+const FeatureTags: React.FC<{ tags: string[] }> = (props) => {
+  return (
+    <div>
+      {props.tags.map((i) => (
+        <IonChip color="primary">{i}</IonChip>
+      ))}
+    </div>
+  );
+};
 
 const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
   props
 ) => {
   return (
     <IonItem>
+      {/* todo: make the card size stretch across the page (fixed width) */}
       <IonCard>
-        <IonCardHeader>
-          <IonCardTitle>{props.itemData.name}</IonCardTitle>
-          <IonCardSubtitle>{props.itemData.power} Watts</IonCardSubtitle>
-        </IonCardHeader>
+        <IonGrid>
+          <IonRow class="ion-align-items-center">
+            <IonCol>
+              <IonRow>
+                <IonCardHeader>
+                  <IonCardTitle>
+                    <b>{props.itemData.name}</b>
+                  </IonCardTitle>
+                  <IonCardSubtitle>
+                    <IonLabel>
+                      {' '}
+                      <IonIcon icon={person} color="primary" />
+                      {props.itemData.provider}
+                    </IonLabel>
+                    <IonLabel>
+                      {' '}
+                      <IonIcon icon={flash} color="primary" />
+                      {props.itemData.energy.power} kW
+                    </IonLabel>
+                  </IonCardSubtitle>
+                </IonCardHeader>
+              </IonRow>
+              <IonRow>
+                <IonCardContent>
+                  <FeatureTags tags={props.itemData.features} />
+                  <IonText color="primary">
+                    <h1>
+                      <b>
+                        {props.itemData.priceRange[0]} ~{' '}
+                        {props.itemData.priceRange[1]} EUR
+                      </b>
+                    </h1>
+                  </IonText>
+                  <IonText color="secondary">
+                    <p>
+                      {props.itemData.description ||
+                        'No description for this item.'}
+                    </p>
+                  </IonText>
+                </IonCardContent>
+              </IonRow>
+              <IonButton
+                shape="round"
+                size="large"
+                routerLink={'/station/detail/' + props.itemData.id}
+              >
+                Details
+              </IonButton>
+              <IonButton
+                color="secondary"
+                shape="round"
+                size="large"
+                fill="outline"
+                onClick={() => console.log('going to the technician list page')}
+              >
+                Find Technician
+              </IonButton>
+            </IonCol>
 
-        <IonCardContent>
-          <IonText color="primary">
-            <h2>
-              {props.itemData.priceRange[0]} ~ {props.itemData.priceRange[1]} EUR
-            </h2>
-          </IonText>
-          <IonText color="secondary">
-            <p>
-              Here's a small text description for the card content. Nothing
-              more, nothing less.
-            </p>
-          </IonText>
-        </IonCardContent>
-        <IonButton>Purchase</IonButton>
+            <IonCol>
+              {/* todo: fix the image size and position so it's fluid */}
+              <IonImg src={props.itemData.image} alt="station image"></IonImg>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
       </IonCard>
     </IonItem>
   );

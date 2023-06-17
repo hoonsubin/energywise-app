@@ -1,9 +1,16 @@
-import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
+import {
+  IonApp,
+  IonRouterOutlet,
+  IonSplitPane,
+  setupIonicReact,
+} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
-import Page from './pages/Page';
 import ChargingKitListPage from './pages/ChargingKitListPage';
+import TechnicianListPage from './pages/TechnicianListPage';
+import SurveyPage from './pages/SurveyPage';
+import ChargingKitDetailPage from './pages/ChargingKitDetailPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -31,18 +38,28 @@ const App: React.FC = () => {
     <IonApp>
       <IonReactRouter>
         <IonSplitPane contentId="main">
+          {/* Always show the menu on the side of the app */}
           <Menu />
+          {/* Route the pages based on the URL */}
           <IonRouterOutlet id="main">
-            {/* todo: create all menu pages */}
-            <Route path="/" exact={true}>
+            {/* Default page. todo: this should be changed to the survey page for production */}
+            <Route path="/" exact>
               <Redirect to="/station" />
             </Route>
-            <Route path="/station" exact={true}>
+            <Route path="/station" exact>
               <ChargingKitListPage />
             </Route>
-            {/* todo: change this to item detail page based on the item id */}
-            <Route path="/app/:name" exact={true}>
-              <Page />
+            <Route path="/station/detail/:id">
+              <ChargingKitDetailPage />
+              {/* todo: add the details page */}
+            </Route>
+
+            {/* todo: need to create all pages */}
+            <Route path="/survey" exact>
+              <SurveyPage />
+            </Route>
+            <Route path="/technicians" exact>
+              <TechnicianListPage />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

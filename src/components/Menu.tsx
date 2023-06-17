@@ -11,7 +11,14 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, } from 'ionicons/icons';
+import {
+  hammerSharp,
+  hammerOutline,
+  batteryChargingSharp,
+  batteryChargingOutline,
+  mailOutline,
+  mailSharp,
+} from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -25,21 +32,21 @@ interface AppPage {
 const appPages: AppPage[] = [
   {
     title: 'Take Survey',
-    url: '/app/survey',
+    url: '/survey',
     iosIcon: mailOutline,
-    mdIcon: mailSharp
+    mdIcon: mailSharp,
   },
   {
     title: 'Station Kits',
-    url: '/app/evstation',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp
+    url: '/station',
+    iosIcon: batteryChargingOutline,
+    mdIcon: batteryChargingSharp,
   },
   {
     title: 'Technicians',
-    url: '/app/technicians',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
+    url: '/technicians',
+    iosIcon: hammerOutline,
+    mdIcon: hammerSharp,
   },
 ];
 
@@ -51,19 +58,31 @@ const Menu: React.FC = () => {
       <IonContent>
         <IonList id="inbox-list">
           <IonListHeader>Inbox</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+          <IonNote>hi@wtf.ninja</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
-                <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>
-                  <IonIcon aria-hidden="true" slot="start" ios={appPage.iosIcon} md={appPage.mdIcon} />
+                <IonItem
+                  className={
+                    location.pathname === appPage.url ? 'selected' : ''
+                  }
+                  routerLink={appPage.url}
+                  routerDirection="none"
+                  lines="none"
+                  detail={false}
+                >
+                  <IonIcon
+                    aria-hidden="true"
+                    slot="start"
+                    ios={appPage.iosIcon}
+                    md={appPage.mdIcon}
+                  />
                   <IonLabel>{appPage.title}</IonLabel>
                 </IonItem>
               </IonMenuToggle>
             );
           })}
         </IonList>
-
       </IonContent>
     </IonMenu>
   );

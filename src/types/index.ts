@@ -1,11 +1,15 @@
+type Phase = 'single' | 'triple';
+
 interface ItemBase {
-    name: string;
-    icon?: string;
-    description: string;
+  id?: number;
+  name: string;
+  image?: string;
+  description: string;
 }
 
 export interface ChargingKit extends ItemBase {
   priceRange: [number, number];
+  provider: string;
   energy: ChargingKitEnergy;
   size: ChargingKitSize;
   purchaseLink: string;
@@ -13,17 +17,19 @@ export interface ChargingKit extends ItemBase {
 }
 
 export interface ChargingKitEnergy {
-  wattage: number;
+  power: number;
   voltage: number;
-  amperage: number;
+  phase: Phase;
 }
 
 export interface ChargingKitSize {
   height: number;
   width: number;
   weight: number;
+  depth: number;
   cableLength: number[];
 }
 
 export interface StationTechnician extends ItemBase {
+  
 }

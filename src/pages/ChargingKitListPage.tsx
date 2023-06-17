@@ -6,25 +6,28 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-} from "@ionic/react";
-import ChargingKitItem from "../components/ChargingKitItem";
+  IonList,
+  IonListHeader,
+  IonText,
+} from '@ionic/react';
+import ChargingKitItem from '../components/ChargingKitItem';
+import { mockChargingStationData } from '../data/mock';
+import { useMemo } from 'react';
 
-const mockData = [
-  {
-    name: "Hello world",
-    icon: "hey",
-    priceRange: [30.5, 69] as [number, number],
-    power: "510",
-  },
-  {
-    name: "Hello to you",
-    icon: "yo",
-    priceRange: [40.5, 79] as [number, number],
-    power: "660",
-  },
-];
+type ChargingKitListPageProps = {
+  filters?: string[];
+};
 
-const ChargingKitListPage: React.FC = () => {
+const pageName = 'EV Stations';
+
+// todo: create a function that uses the `filters` prop to filter the results.
+
+const ChargingKitListPage: React.FC<ChargingKitListPageProps> = (props) => {
+  const stationData = useMemo(() => {
+    // todo: refactor this fetch data remotely or from a full dataset.
+    return mockChargingStationData;
+  }, []);
+
   return (
     <IonPage>
       <IonHeader>
@@ -32,21 +35,27 @@ const ChargingKitListPage: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>EV Stations</IonTitle>
+          <IonTitle>{pageName}</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">EV Stations</IonTitle>
+            <IonTitle size="large">{pageName}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        {/* Change this to a list parsing later */}
-        <ChargingKitItem itemData={mockData[0]} />
-        <ChargingKitItem
-          itemData={mockData[1]}
-        />
+        <IonList>
+          <IonListHeader>
+            <IonText>
+              <h2>Choose your Offer</h2>
+            </IonText>
+          </IonListHeader>
+          {/* todo: add item filtering based on keywords and tags */}
+          {stationData.map((i) => (
+            <ChargingKitItem itemData={i} key={i.id} />
+          ))}
+        </IonList>
       </IonContent>
     </IonPage>
   );
