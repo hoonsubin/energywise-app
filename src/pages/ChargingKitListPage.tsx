@@ -9,16 +9,16 @@ import {
   IonList,
   IonListHeader,
   IonLabel,
-} from "@ionic/react";
-import ChargingKitItem from "../components/ChargingKitItem";
-import { mockChargingStationData } from "../data/mock";
-import { useMemo } from "react";
+} from '@ionic/react';
+import ChargingKitItem from '../components/ChargingKitItem';
+import { mockChargingStationData } from '../data/mock';
+import { useMemo } from 'react';
 
 type ChargingKitListPageProps = {
   filters?: string[];
 };
 
-const pageName = "EV Stations";
+const pageName = 'EV Stations';
 
 // todo: create a function that uses the `filters` prop to filter the results.
 

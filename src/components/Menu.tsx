@@ -8,9 +8,9 @@ import {
   IonMenu,
   IonMenuToggle,
   IonNote,
-} from "@ionic/react";
+} from '@ionic/react';
 
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 import {
   hammerSharp,
   hammerOutline,
@@ -18,8 +18,8 @@ import {
   batteryChargingOutline,
   mailOutline,
   mailSharp,
-} from "ionicons/icons";
-import "./Menu.css";
+} from 'ionicons/icons';
+import './Menu.css';
 
 interface AppPage {
   url: string;
@@ -31,20 +31,20 @@ interface AppPage {
 // todo: move this to a `route.ts` file
 const appPages: AppPage[] = [
   {
-    title: "Take Survey",
-    url: "/survey",
+    title: 'Take Survey',
+    url: '/survey',
     iosIcon: mailOutline,
     mdIcon: mailSharp,
   },
   {
-    title: "Station Kits",
-    url: "/station",
+    title: 'Station Kits',
+    url: '/station',
     iosIcon: batteryChargingOutline,
     mdIcon: batteryChargingSharp,
   },
   {
-    title: "Technicians",
-    url: "/technicians",
+    title: 'Technicians',
+    url: '/technicians',
     iosIcon: hammerOutline,
     mdIcon: hammerSharp,
   },
@@ -64,7 +64,7 @@ const Menu: React.FC = () => {
               <IonMenuToggle key={index} autoHide={false}>
                 <IonItem
                   className={
-                    location.pathname === appPage.url ? "selected" : ""
+                    location.pathname === appPage.url ? 'selected' : ''
                   }
                   routerLink={appPage.url}
                   routerDirection="none"

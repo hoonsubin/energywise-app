@@ -1,9 +1,9 @@
-import { ChargingKit } from "../types";
+import { ChargingKit } from '../types';
 
 const mockChargingStation: ChargingKit[] = [
   {
-    name: "Terra AC Wallbox",
-    image: "https://docs-demo.ionic.io/assets/madison.jpg",
+    name: 'Terra AC Wallbox',
+    image: 'https://docs-demo.ionic.io/assets/madison.jpg',
     purchaseLink: '',
     provider: 'ABB Ltd',
     providerImg: 'https://www.marketbeat.com/logos/abb-ltd-logo.png',
@@ -20,13 +20,13 @@ const mockChargingStation: ChargingKit[] = [
       width: 195,
       depth: 143,
       weight: 30,
-      
+
       cableLength: [15, 30],
     },
   },
   {
-    name: "Hello world 2",
-    image: "https://docs-demo.ionic.io/assets/madison.jpg",
+    name: 'Hello world 2',
+    image: 'https://docs-demo.ionic.io/assets/madison.jpg',
     purchaseLink: '',
     provider: '',
     providerImg: '',
@@ -47,8 +47,8 @@ const mockChargingStation: ChargingKit[] = [
     },
   },
   {
-    name: "Terra AC Wallbox",
-    image: "https://docs-demo.ionic.io/assets/madison.jpg",
+    name: 'Terra AC Wallbox',
+    image: 'https://docs-demo.ionic.io/assets/madison.jpg',
     purchaseLink: '',
     provider: 'ABB Ltd',
     providerImg: '',
@@ -65,15 +65,15 @@ const mockChargingStation: ChargingKit[] = [
       width: 195,
       depth: 143,
       weight: 30,
-      
+
       cableLength: [15, 30],
     },
-  }
+  },
 ];
 
 export const mockChargingStationData = mockChargingStation.map((i, index) => {
   return {
     id: index,
-    ...i
-  }
-})
+    ...i,
+  };
+});

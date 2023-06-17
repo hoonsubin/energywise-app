@@ -1,6 +1,6 @@
-import { IonIcon, IonButton } from "@ionic/react";
-import { useHistory } from "react-router";
-import { arrowBack } from "ionicons/icons";
+import { IonIcon, IonButton } from '@ionic/react';
+import { useHistory } from 'react-router';
+import { arrowBack } from 'ionicons/icons';
 
 const BackButton: React.FC = () => {
   const history = useHistory();

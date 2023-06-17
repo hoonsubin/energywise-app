@@ -14,9 +14,9 @@ import {
   IonImg,
   IonChip,
   IonLabel,
-} from "@ionic/react";
-import { ChargingKit } from "../types";
-import { flash, person } from "ionicons/icons";
+} from '@ionic/react';
+import { ChargingKit } from '../types';
+import { flash, person } from 'ionicons/icons';
 
 type ChargingKitItemProps = ChargingKit;
 
@@ -47,12 +47,12 @@ const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
                   </IonCardTitle>
                   <IonCardSubtitle>
                     <IonLabel>
-                      {" "}
+                      {' '}
                       <IonIcon icon={person} color="primary" />
                       {props.itemData.provider}
                     </IonLabel>
                     <IonLabel>
-                      {" "}
+                      {' '}
                       <IonIcon icon={flash} color="primary" />
                       {props.itemData.energy.power} kW
                     </IonLabel>
@@ -65,7 +65,7 @@ const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
                   <IonText color="primary">
                     <h1>
                       <b>
-                        {props.itemData.priceRange[0]} ~{" "}
+                        {props.itemData.priceRange[0]} ~{' '}
                         {props.itemData.priceRange[1]} EUR
                       </b>
                     </h1>
@@ -73,7 +73,7 @@ const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
                   <IonText color="secondary">
                     <p>
                       {props.itemData.description ||
-                        "No description for this item."}
+                        'No description for this item.'}
                     </p>
                   </IonText>
                 </IonCardContent>
@@ -82,7 +82,7 @@ const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
                 shape="round"
                 size="large"
                 fill="outline"
-                routerLink={"/station/detail/" + props.itemData.id}
+                routerLink={'/station/detail/' + props.itemData.id}
               >
                 Details
               </IonButton>
@@ -90,10 +90,7 @@ const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
 
             <IonCol>
               {/* todo: fix the image size and position so it's fluid */}
-              <IonImg
-                src={props.itemData.image}
-                alt="station image"
-              ></IonImg>
+              <IonImg src={props.itemData.image} alt="station image"></IonImg>
             </IonCol>
           </IonRow>
         </IonGrid>

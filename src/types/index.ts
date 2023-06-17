@@ -1,8 +1,8 @@
 interface ItemBase {
-    id?: number;
-    name: string;
-    image?: string;
-    description: string;
+  id?: number;
+  name: string;
+  image?: string;
+  description: string;
 }
 
 export interface ChargingKit extends ItemBase {
@@ -29,5 +29,4 @@ export interface ChargingKitSize {
   cableLength: number[];
 }
 
-export interface StationTechnician extends ItemBase {
-}
+export interface StationTechnician extends ItemBase {}
