@@ -15,11 +15,11 @@ import {
   IonCardTitle,
   IonCardSubtitle,
   IonText,
-} from "@ionic/react";
-import { mockChargingStationData } from "../data/mock";
-import { useMemo } from "react";
-import { useParams } from "react-router";
-import BackButton from "../components/BackButton";
+} from '@ionic/react';
+import { mockChargingStationData } from '../data/mock';
+import { useMemo } from 'react';
+import { useParams } from 'react-router';
+import BackButton from '../components/BackButton';
 import './ChargingKitDetailPage.css';
 
 type ChargingKitListPageProps = {
@@ -84,10 +84,9 @@ const ChargingKitDetailPage: React.FC<ChargingKitListPageProps> = (props) => {
           <IonRow>
             {/* todo: Add item description */}
             <IonText>hello</IonText>
-            
           </IonRow>
           <IonRow>
-          <IonLabel>world</IonLabel>
+            <IonLabel>world</IonLabel>
           </IonRow>
         </IonGrid>
       </IonContent>
