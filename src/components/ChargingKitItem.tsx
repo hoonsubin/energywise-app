@@ -18,7 +18,9 @@ import {
 import { ChargingKit } from '../types';
 import { flash, person } from 'ionicons/icons';
 
-type ChargingKitItemProps = ChargingKit;
+type ChargingKitItemProps = {
+  itemData: ChargingKit
+};
 
 const FeatureTags: React.FC<{ tags: string[] }> = (props) => {
   return (
@@ -30,7 +32,7 @@ const FeatureTags: React.FC<{ tags: string[] }> = (props) => {
   );
 };
 
-const ChargingKitItem: React.FC<{ itemData: ChargingKitItemProps }> = (
+const ChargingKitItem: React.FC<ChargingKitItemProps> = (
   props
 ) => {
   return (

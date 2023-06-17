@@ -1,6 +1,6 @@
 type Phase = 'single' | 'triple';
 
-interface ItemBase {
+export interface ItemBase {
   id?: number;
   name: string;
   image?: string;
@@ -31,5 +31,10 @@ export interface ChargingKitSize {
 }
 
 export interface StationTechnician extends ItemBase {
-  
+  address: string;
+  postalCode: number;
+  city: string;
+  phoneNo: string;
+  email: string;
+  website: string;
 }
