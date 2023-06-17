@@ -7,11 +7,20 @@ import {
   IonTitle,
   IonToolbar,
   IonLabel,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardSubtitle,
+  IonText,
 } from "@ionic/react";
 import { mockChargingStationData } from "../data/mock";
 import { useMemo } from "react";
 import { useParams } from "react-router";
 import BackButton from "../components/BackButton";
+import './ChargingKitDetailPage.css';
 
 type ChargingKitListPageProps = {
   filters?: string[];
@@ -51,7 +60,36 @@ const ChargingKitDetailPage: React.FC<ChargingKitListPageProps> = (props) => {
             <BackButton />
           </IonToolbar>
         </IonHeader>
-        <IonLabel>Looking at item {pageName}</IonLabel>
+        <IonGrid>
+          <IonRow>
+            <IonCol>
+              <IonCard>
+                <img src={pageData.image} alt="station image" />
+                <IonCardHeader>
+                  <IonCardTitle>{pageData.name}</IonCardTitle>
+                  <IonCardSubtitle>Charging Station</IonCardSubtitle>
+                </IonCardHeader>
+              </IonCard>
+            </IonCol>
+            <IonCol>
+              <IonCard>
+                <img src={pageData.providerImg} alt="provider logo" />
+                <IonCardHeader>
+                  <IonCardTitle>{pageData.provider}</IonCardTitle>
+                  <IonCardSubtitle>Installation</IonCardSubtitle>
+                </IonCardHeader>
+              </IonCard>
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            {/* todo: Add item description */}
+            <IonText>hello</IonText>
+            
+          </IonRow>
+          <IonRow>
+          <IonLabel>world</IonLabel>
+          </IonRow>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );
