@@ -19,7 +19,7 @@ import { ChargingKit } from '../types';
 import { flash, person } from 'ionicons/icons';
 
 type ChargingKitItemProps = {
-  itemData: ChargingKit
+  itemData: ChargingKit;
 };
 
 const FeatureTags: React.FC<{ tags: string[] }> = (props) => {
@@ -32,9 +32,7 @@ const FeatureTags: React.FC<{ tags: string[] }> = (props) => {
   );
 };
 
-const ChargingKitItem: React.FC<ChargingKitItemProps> = (
-  props
-) => {
+const ChargingKitItem: React.FC<ChargingKitItemProps> = (props) => {
   return (
     <IonItem>
       {/* todo: make the card size stretch across the page (fixed width) */}
@@ -81,21 +79,23 @@ const ChargingKitItem: React.FC<ChargingKitItemProps> = (
                 </IonCardContent>
               </IonRow>
               <IonButton
-                shape="round"
-                size="large"
-                routerLink={'/station/detail/' + props.itemData.id}
-              >
-                Details
-              </IonButton>
-              <IonButton
-                color="secondary"
-                shape="round"
-                size="large"
-                fill="outline"
-                onClick={() => console.log('going to the technician list page')}
-              >
-                Find Technician
-              </IonButton>
+                  color="primary"
+                  shape="round"
+                  fill="solid"
+                  size="large"
+                  routerLink={'/station/detail/' + props.itemData.id}
+                >
+                  Details
+                </IonButton>
+                <IonButton
+                  color="secondary"
+                  shape="round"
+                  size="large"
+                  fill="outline"
+                  routerLink="/technicians"
+                >
+                  Technicians
+                </IonButton>
             </IonCol>
 
             <IonCol>

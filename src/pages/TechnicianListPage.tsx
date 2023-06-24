@@ -13,10 +13,11 @@ import {
   IonLoading,
   IonItem,
   IonInput,
+  IonIcon,
 } from '@ionic/react';
+import { navigate } from 'ionicons/icons';
 import { useMemo, useState, useCallback, useEffect } from 'react';
 import TechnicianItem from '../components/TechnicianItem';
-import PostCodeInput from '../components/PostCodeInput';
 import { mockTechnicianData } from '../data/mock';
 import { useJsApiLoader } from '@react-google-maps/api';
 
@@ -31,10 +32,10 @@ type UserLocInfo = {
 };
 
 const TechnicianListPage: React.FC = () => {
-  const [userLoc, setUserLoc] = useState<UserLocInfo>({
-    postCode: 0,
-    city: '',
-  });
+  // todo: bind this value with the text element value
+  const [cityInput, setCityInput] = useState('');
+  const [postInput, setPostInput] = useState('');
+  const [userLocation, setUserLocation] = useState<google.maps.LatLng>();
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-maps',
@@ -53,17 +54,41 @@ const TechnicianListPage: React.FC = () => {
     return mockTechnicianData;
   }, []);
 
+  const getUserLocation = useCallback(() => {
+    if ('geolocation' in navigator && geocoder) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        // Get user location in a formatted data
+        const sessionUserLoc = new window.google.maps.LatLng(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+
+        geocoder.geocode({ location: sessionUserLoc }, (res) => {
+          if (res) {
+            // Get the formatted string address based on the input coordinates
+            const userAddr = res[0].formatted_address;
+            // todo: only works with the German address scheme. We need a smarter way to parse the data.
+            const postCodeAndCity = userAddr.split(', ')[1].split(' ');
+
+            console.log(postCodeAndCity.toString());
+            setPostInput(postCodeAndCity[0])
+            setCityInput(postCodeAndCity[1])
+          }
+        });
+      });
+    } else {
+      console.warn('Failed to get the device location permission.');
+    }
+  }, [geocoder]);
+
   const inputUserLoc = (input: UserLocInfo) => {
     getLngLatFromAddr(`${input.postCode} ${input.city}`)
       .then((loc) => {
-        setUserLoc({
-          ...input,
-          location: loc,
-        });
+        setUserLocation(loc);
 
         console.log(
-          `The user is based in ${userLoc.postCode} ${
-            userLoc.city
+          `The user is based in ${input.postCode} ${
+            input.city
           } with the coordinates of ${loc.toString()}`
         );
       })
@@ -108,48 +133,61 @@ const TechnicianListPage: React.FC = () => {
         </IonHeader>
         {geocoder && isLoaded ? (
           <>
-            {userLoc.location ? (
+            {userLocation ? (
               <IonList>
                 <IonListHeader>
                   <IonText>
                     <h2>Technicians Near Your Area</h2>
                   </IonText>
                 </IonListHeader>
-                {/* todo: add item filtering based on keywords and tags */}
                 {technicianData.map((i) => (
                   <TechnicianItem itemData={i} key={i.id} />
                 ))}
               </IonList>
             ) : (
               <IonList>
-                {/* todo: implement user location input field */}
                 <IonItem>
                   <IonInput
                     label="City"
                     placeholder="Munich"
-                    onIonInput={(e) =>
-                      setUserLoc({
-                        ...userLoc,
-                        city: e.target.value as string,
-                      })
-                    }
+                    value={cityInput}
+                    onIonInput={(e) => {
+                      const value = e.target.value as string;
+                      setCityInput(value);
+                    }}
                   ></IonInput>
                 </IonItem>
                 <IonItem>
-                  <PostCodeInput
+                  <IonInput
+                  type='number'
                     label="Post Code"
-                    placeHolder="80335"
-                    onChange={(i) =>
-                      setUserLoc({ ...userLoc, postCode: parseInt(i) })
-                    }
-                  />
+                    placeholder="80335"
+                    onIonInput={(e) => {
+                      const value = e.target.value as string;
+                      setPostInput(value);
+                    }}
+                    value={postInput}
+                  ></IonInput>
                 </IonItem>
                 <IonItem>
                   <IonButton
                     size="large"
                     shape="round"
-                    onClick={() => inputUserLoc(userLoc)}
-                    disabled={!userLoc.city || !userLoc.postCode}
+                    fill="clear"
+                    onClick={() => getUserLocation()}
+                  >
+                    <IonIcon slot="icon-only" icon={navigate}></IonIcon>
+                  </IonButton>
+                  <IonButton
+                    size="large"
+                    shape="round"
+                    onClick={() =>
+                      inputUserLoc({
+                        postCode: parseInt(postInput),
+                        city: cityInput,
+                      })
+                    }
+                    disabled={!cityInput || !postInput}
                   >
                     Search
                   </IonButton>
