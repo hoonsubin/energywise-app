@@ -48,7 +48,7 @@ const ChargingKitListPage: React.FC<ChargingKitListPageProps> = (props) => {
         <IonList>
           <IonListHeader>
             <IonText>
-              <h2>Choose your Offer</h2>
+              <h2>Choose Your Offer</h2>
             </IonText>
           </IonListHeader>
           {/* todo: add item filtering based on keywords and tags */}
