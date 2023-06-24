@@ -42,9 +42,8 @@ const App: React.FC = () => {
           <Menu />
           {/* Route the pages based on the URL */}
           <IonRouterOutlet id="main">
-            {/* Default page. todo: this should be changed to the survey page for production */}
             <Route path="/" exact>
-              <Redirect to="/station" />
+              <Redirect to="/survey" />
             </Route>
             <Route path="/station" exact>
               <ChargingKitListPage />
