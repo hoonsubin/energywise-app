@@ -25,6 +25,7 @@ type SurveyBaseProps = {
   nextButtonOnClick?: () => void;
   nextPage?: () => React.ReactElement;
   nextButtonText?: string;
+  questionPosition?: 'first' | 'last';
 };
 
 const SurveyBase: React.FC<SurveyBaseProps> = (props) => {
@@ -55,11 +56,13 @@ const SurveyBase: React.FC<SurveyBaseProps> = (props) => {
           </IonListHeader>
           {props.children.map((i) => i)}
           <IonItem key="next-button">
-            <IonNavLink routerDirection="back">
-              <IonButton slot="start" fill="clear">
-                Previous
-              </IonButton>
-            </IonNavLink>
+            {props.questionPosition !== 'first' && (
+              <IonNavLink routerDirection="back">
+                <IonButton slot="start" fill="clear">
+                  Previous
+                </IonButton>
+              </IonNavLink>
+            )}
 
             <div style={{ margin: 'auto' }}>
               <IonNavLink routerDirection="forward" component={props.nextPage}>

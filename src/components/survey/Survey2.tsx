@@ -7,7 +7,7 @@ import {
   IonButton,
   IonIcon,
 } from '@ionic/react';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { help } from 'ionicons/icons';
 import HelperModal from '../HelperModal';
 import Survey3 from './Survey3';
@@ -25,9 +25,9 @@ const Survey2: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const nextButton = () => {
+  const nextButton = () => useCallback(() => {
     console.log(answer);
-  };
+  }, [answer]);
 
   return (
     <SurveyBase

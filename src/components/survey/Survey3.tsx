@@ -9,7 +9,7 @@ import {
   IonList,
   IonRange,
 } from '@ionic/react';
-import { useState } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { help, flashOutline, flash } from 'ionicons/icons';
 import HelperModal from '../HelperModal';
 import Survey4 from './Survey4';
@@ -22,14 +22,28 @@ const surveyOptions = [
 ];
 
 const ChargerCalc = () => {
+  // in kW
+  const minPower = 3.7;
+  const maxPower = 22;
+  const [power, setPower] = useState(minPower);
+
+  const chargingTime = useMemo(() => {
+    return ((15 / 100) / power).toFixed(2); 
+  }, [power])
+
   return (
     <div>
       <IonList>
         <IonItem>
-          <IonLabel>Target charging power (kW)</IonLabel>
+          <IonLabel>Target charging power: {power} kW</IonLabel>
         </IonItem>
         <IonItem>
-          <IonRange>
+          <IonRange onIonChange={(e) => {
+            const powerRange = maxPower - minPower;
+            const currentVal = e.detail.value as number / 100;
+            setPower(Number.parseFloat((powerRange * currentVal + minPower).toFixed(1)));
+            
+          }}>
             <IonIcon slot="start" icon={flashOutline} />
             <IonIcon slot="end" icon={flash} />
           </IonRange>
@@ -38,7 +52,7 @@ const ChargerCalc = () => {
           <IonLabel>Estimated charging time</IonLabel>
         </IonItem>
         <IonItem>
-          <h1>4 hours</h1>
+          <h1>{chargingTime} hours</h1>
         </IonItem>
       </IonList>
     </div>
@@ -49,9 +63,9 @@ const Survey3: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const nextButton = () => {
+  const nextButton = () => useCallback(() => {
     console.log(answer);
-  };
+  }, [answer]);
 
   return (
     <SurveyBase

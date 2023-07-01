@@ -7,7 +7,7 @@ import {
   IonButton,
   IonIcon,
 } from '@ionic/react';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Survey2 from './Survey2';
 import { help } from 'ionicons/icons';
 import HelperModal from '../HelperModal';
@@ -18,9 +18,9 @@ const Survey1: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const nextButton = () => {
+  const nextButton = () => useCallback(() => {
     console.log(answer);
-  };
+  }, [answer]);
 
   return (
     <SurveyBase
@@ -29,6 +29,7 @@ const Survey1: React.FC = () => {
       nextButtonDisabled={!answer}
       nextButtonOnClick={nextButton}
       nextPage={() => <Survey2 />}
+      questionPosition='first'
     >
       <IonItem color="primary" className="item-text-wrap">
         <IonLabel>
