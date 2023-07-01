@@ -100,7 +100,11 @@ const ChargingKitItem: React.FC<ChargingKitItemProps> = (props) => {
 
             <IonCol>
               {/* todo: fix the image size and position so it's fluid */}
-              <IonImg src={props.itemData.image} alt="station image"></IonImg>
+              <img style={{
+                borderRadius: '8px',
+                maxWidth: '100%',
+                height: '50%'
+              }} src={props.itemData.image} alt="station image"></img>
             </IonCol>
           </IonRow>
         </IonGrid>
