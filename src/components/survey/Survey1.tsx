@@ -29,11 +29,12 @@ const Survey1: React.FC = () => {
       nextButtonDisabled={!answer}
       nextButtonOnClick={nextButton}
       nextPage={() => <Survey2 />}
-      questionPosition='first'
+      questionPosition="first"
     >
-      <IonItem color="primary" className="item-text-wrap">
-        <IonLabel>
-          What is the brand and model of your electric vehicle?
+      <IonItem color="primary">
+        <IonLabel className="ion-text-wrap">
+          <h1>Question</h1>
+          <p>What is the brand and model of your electric vehicle?</p>
         </IonLabel>
         <IonButton
           shape="round"

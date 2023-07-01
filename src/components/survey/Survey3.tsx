@@ -14,12 +14,7 @@ import { help, flashOutline, flash } from 'ionicons/icons';
 import HelperModal from '../HelperModal';
 import Survey4 from './Survey4';
 
-const surveyOptions = [
-  '3,7 kW',
-  '7,4 kW',
-  '11 kW',
-  '22 kW',
-];
+const surveyOptions = ['3,7 kW', '7,4 kW', '11 kW', '22 kW'];
 
 const ChargerCalc = () => {
   // in kW
@@ -28,8 +23,8 @@ const ChargerCalc = () => {
   const [power, setPower] = useState(minPower);
 
   const chargingTime = useMemo(() => {
-    return ((15 / 100) / power).toFixed(2); 
-  }, [power])
+    return (15 / 100 / power).toFixed(2);
+  }, [power]);
 
   return (
     <div>
@@ -38,12 +33,17 @@ const ChargerCalc = () => {
           <IonLabel>Target charging power: {power} kW</IonLabel>
         </IonItem>
         <IonItem>
-          <IonRange onIonChange={(e) => {
-            const powerRange = maxPower - minPower;
-            const currentVal = e.detail.value as number / 100;
-            setPower(Number.parseFloat((powerRange * currentVal + minPower).toFixed(1)));
-            
-          }}>
+          <IonRange
+            onIonChange={(e) => {
+              const powerRange = maxPower - minPower;
+              const currentVal = (e.detail.value as number) / 100;
+              setPower(
+                Number.parseFloat(
+                  (powerRange * currentVal + minPower).toFixed(1)
+                )
+              );
+            }}
+          >
             <IonIcon slot="start" icon={flashOutline} />
             <IonIcon slot="end" icon={flash} />
           </IonRange>
@@ -75,9 +75,10 @@ const Survey3: React.FC = () => {
       nextButtonOnClick={nextButton}
       nextPage={() => <Survey4 />}
     >
-      <IonItem color="primary" className="item-text-wrap">
-        <IonLabel>
-          What should be the charging speed of you charging station?
+      <IonItem color="primary">
+        <IonLabel className="ion-text-wrap">
+          <h1>Question</h1>
+          <p>What should be the charging speed of you charging station?</p>
         </IonLabel>
         <IonButton
           shape="round"

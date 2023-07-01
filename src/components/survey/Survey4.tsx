@@ -30,10 +30,13 @@ const Survey4: React.FC = () => {
       nextButtonOnClick={nextButton}
       nextPage={() => <Survey5 />}
     >
-      <IonItem color="primary" className="item-text-wrap">
-        <IonLabel>
-          If Connectivity is important for you, please select the types of
-          connection that you want the Charging station to have.
+      <IonItem color="primary">
+        <IonLabel className="ion-text-wrap">
+          <h1>Question</h1>
+          <p>
+            If Connectivity is important for you, please select the types of
+            connection that you want the Charging station to have.
+          </p>
         </IonLabel>
         <IonButton
           shape="round"

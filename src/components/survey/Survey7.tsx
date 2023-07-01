@@ -33,10 +33,13 @@ const Survey7: React.FC = () => {
       nextButtonOnClick={nextButton}
       nextButtonText="Finish"
     >
-      <IonItem color="primary" className="item-text-wrap">
-        <IonLabel>
-          How important is to know which features does the App has? Which App
-          features are more relevant for you?
+      <IonItem color="primary">
+        <IonLabel className="ion-text-wrap">
+          <h1>Question</h1>
+          <p>
+            How important is to know which features does the App has? Which App
+            features are more relevant for you?
+          </p>
         </IonLabel>
         <IonButton
           shape="round"

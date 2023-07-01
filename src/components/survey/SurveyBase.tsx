@@ -45,7 +45,6 @@ const SurveyBase: React.FC<SurveyBaseProps> = (props) => {
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">{props.title}</IonTitle>
-            <IonProgressBar value={props.progress} />
           </IonToolbar>
         </IonHeader>
         <IonList>

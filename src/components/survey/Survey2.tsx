@@ -37,8 +37,11 @@ const Survey2: React.FC = () => {
       nextButtonOnClick={nextButton}
       nextPage={() => <Survey3 />}
     >
-      <IonItem color="primary" className="item-text-wrap">
-        <IonLabel>Where should the charging station be installed?</IonLabel>
+      <IonItem color="primary">
+        <IonLabel className="ion-text-wrap">
+          <h1>Question</h1>
+          <p>Where should the charging station be installed?</p>
+        </IonLabel>
         <IonButton
           shape="round"
           fill="solid"
