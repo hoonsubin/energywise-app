@@ -8,13 +8,13 @@ import {
   IonIcon,
 } from '@ionic/react';
 import { useState } from 'react';
-import Survey2 from './Survey2';
 import { help } from 'ionicons/icons';
 import HelperModal from '../HelperModal';
+import Survey5 from './Survey5';
 
-const carOptions = ['Tesla', 'Toyota', 'BMW', 'VolksWagen'];
+const surveyOptions = ['No preference', 'Ethernet', 'Bluetooth', 'WLAN', '4G'];
 
-const Survey1: React.FC = () => {
+const Survey4: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -24,15 +24,16 @@ const Survey1: React.FC = () => {
 
   return (
     <SurveyBase
-      progress={0.1}
-      title="Q1: Vehicle Compatibility"
+      progress={0.5}
+      title="Q4: Connectivity"
       nextButtonDisabled={!answer}
       nextButtonOnClick={nextButton}
-      nextPage={() => <Survey2 />}
+      nextPage={() => <Survey5 />}
     >
       <IonItem color="primary" className="item-text-wrap">
         <IonLabel>
-          What is the brand and model of your electric vehicle?
+          If Connectivity is important for you, please select the types of
+          connection that you want the Charging station to have.
         </IonLabel>
         <IonButton
           shape="round"
@@ -45,7 +46,7 @@ const Survey1: React.FC = () => {
         </IonButton>
       </IonItem>
       <IonRadioGroup>
-        {carOptions.map((i) => {
+        {surveyOptions.map((i) => {
           return (
             <IonItem>
               <IonRadio onClick={() => setAnswer(i)} value={i}>
@@ -64,12 +65,13 @@ const Survey1: React.FC = () => {
         }}
       >
         <p>
-          Identifying your specific vehicle model ensures compatibility between
-          the charging station and your EV.
+          Charging Station connectivity is important for many people, therefore,
+          is important to understand if is also important to you, so we can
+          derive a good CS for your needs.
         </p>
       </HelperModal>
     </SurveyBase>
   );
 };
 
-export default Survey1;
+export default Survey4;

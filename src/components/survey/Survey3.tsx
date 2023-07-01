@@ -6,15 +6,46 @@ import {
   IonLabel,
   IonButton,
   IonIcon,
+  IonList,
+  IonRange,
 } from '@ionic/react';
 import { useState } from 'react';
-import Survey2 from './Survey2';
-import { help } from 'ionicons/icons';
+import { help, flashOutline, flash } from 'ionicons/icons';
 import HelperModal from '../HelperModal';
+import Survey4 from './Survey4';
 
-const carOptions = ['Tesla', 'Toyota', 'BMW', 'VolksWagen'];
+const surveyOptions = [
+  '3,7 kW (100km in 4 hours 30 mins)',
+  '7,4 kW (100km in 2 hours 15 mins)',
+  '11 kW (100km in 1 hour 30 min)',
+  '22 kW (100km in 45 min)',
+];
 
-const Survey1: React.FC = () => {
+const ChargerCalc = () => {
+  return (
+    <div>
+      <IonList>
+        <IonItem>
+          <IonLabel>Target charging power (kW)</IonLabel>
+        </IonItem>
+        <IonItem>
+          <IonRange>
+            <IonIcon slot="start" icon={flashOutline} />
+            <IonIcon slot="end" icon={flash} />
+          </IonRange>
+        </IonItem>
+        <IonItem>
+          <IonLabel>Estimated charging time</IonLabel>
+        </IonItem>
+        <IonItem>
+          <h1>4 hours</h1>
+        </IonItem>
+      </IonList>
+    </div>
+  );
+};
+
+const Survey3: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -24,15 +55,15 @@ const Survey1: React.FC = () => {
 
   return (
     <SurveyBase
-      progress={0.1}
-      title="Q1: Vehicle Compatibility"
+      progress={0.4}
+      title="Q3: Charging Speed"
       nextButtonDisabled={!answer}
       nextButtonOnClick={nextButton}
-      nextPage={() => <Survey2 />}
+      nextPage={() => <Survey4 />}
     >
       <IonItem color="primary" className="item-text-wrap">
         <IonLabel>
-          What is the brand and model of your electric vehicle?
+          What should be the charging speed of you charging station?
         </IonLabel>
         <IonButton
           shape="round"
@@ -45,7 +76,7 @@ const Survey1: React.FC = () => {
         </IonButton>
       </IonItem>
       <IonRadioGroup>
-        {carOptions.map((i) => {
+        {surveyOptions.map((i) => {
           return (
             <IonItem>
               <IonRadio onClick={() => setAnswer(i)} value={i}>
@@ -63,13 +94,12 @@ const Survey1: React.FC = () => {
           setIsModalOpen(false);
         }}
       >
-        <p>
-          Identifying your specific vehicle model ensures compatibility between
-          the charging station and your EV.
-        </p>
+        {/* Add a charger calculator based on https://www.homechargingstations.com/ev-charging-time-calculator/ */}
+        {/* User inputs the charging power in kW, and the app outputs the time it takes to charge 100 KMs */}
+        <ChargerCalc />
       </HelperModal>
     </SurveyBase>
   );
 };
 
-export default Survey1;
+export default Survey3;

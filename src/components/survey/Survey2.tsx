@@ -6,12 +6,13 @@ import {
   IonLabel,
   IonButton,
   IonIcon,
-  IonPopover,
-  IonContent,
 } from '@ionic/react';
 import { useState } from 'react';
 import { help } from 'ionicons/icons';
-const carOptions = [
+import HelperModal from '../HelperModal';
+import Survey3 from './Survey3';
+
+const surveyOptions = [
   'Housewall',
   'Garage (inside)',
   'Garage (outside)',
@@ -22,6 +23,7 @@ const carOptions = [
 
 const Survey2: React.FC = () => {
   const [answer, setAnswer] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const nextButton = () => {
     console.log(answer);
@@ -33,6 +35,7 @@ const Survey2: React.FC = () => {
       title="Q2: Charging Location"
       nextButtonDisabled={!answer}
       nextButtonOnClick={nextButton}
+      nextPage={() => <Survey3 />}
     >
       <IonItem color="primary" className="item-text-wrap">
         <IonLabel>Where should the charging station be installed?</IonLabel>
@@ -41,19 +44,13 @@ const Survey2: React.FC = () => {
           fill="solid"
           slot="end"
           color="warning"
-          id="survey2-detail"
+          onClick={() => setIsModalOpen(true)}
         >
           <IonIcon slot="icon-only" icon={help}></IonIcon>
         </IonButton>
-        <IonPopover trigger="survey2-detail" triggerAction="click">
-          <IonContent class="ion-padding">
-            Identifying your specific vehicle model ensures compatibility
-            between the charging station and your EV.
-          </IonContent>
-        </IonPopover>
       </IonItem>
       <IonRadioGroup>
-        {carOptions.map((i) => {
+        {surveyOptions.map((i) => {
           return (
             <IonItem>
               <IonRadio onClick={() => setAnswer(i)} value={i}>
@@ -63,6 +60,19 @@ const Survey2: React.FC = () => {
           );
         })}
       </IonRadioGroup>
+      <HelperModal
+        isOpen={isModalOpen}
+        title="Tips"
+        onClickDismiss={() => {
+          console.log('closing');
+          setIsModalOpen(false);
+        }}
+      >
+        <p>
+          Identifying your specific vehicle model ensures compatibility between
+          the charging station and your EV.
+        </p>
+      </HelperModal>
     </SurveyBase>
   );
 };

@@ -8,13 +8,18 @@ import {
   IonIcon,
 } from '@ionic/react';
 import { useState } from 'react';
-import Survey2 from './Survey2';
 import { help } from 'ionicons/icons';
 import HelperModal from '../HelperModal';
+import Survey7 from './Survey7';
 
-const carOptions = ['Tesla', 'Toyota', 'BMW', 'VolksWagen'];
+const surveyOptions = [
+  'Integration with Smart Home',
+  'Integration with PVs',
+  'Mobile app integration',
+  'Smart charging capabilities (Charging in low peak times)',
+];
 
-const Survey1: React.FC = () => {
+const Survey6: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -24,16 +29,14 @@ const Survey1: React.FC = () => {
 
   return (
     <SurveyBase
-      progress={0.1}
-      title="Q1: Vehicle Compatibility"
+      progress={0.8}
+      title="Q6: Software Features 1/2"
       nextButtonDisabled={!answer}
       nextButtonOnClick={nextButton}
-      nextPage={() => <Survey2 />}
+      nextPage={() => <Survey7 />}
     >
       <IonItem color="primary" className="item-text-wrap">
-        <IonLabel>
-          What is the brand and model of your electric vehicle?
-        </IonLabel>
+        <IonLabel>Which features are important to you?</IonLabel>
         <IonButton
           shape="round"
           fill="solid"
@@ -45,7 +48,7 @@ const Survey1: React.FC = () => {
         </IonButton>
       </IonItem>
       <IonRadioGroup>
-        {carOptions.map((i) => {
+        {surveyOptions.map((i) => {
           return (
             <IonItem>
               <IonRadio onClick={() => setAnswer(i)} value={i}>
@@ -64,12 +67,12 @@ const Survey1: React.FC = () => {
         }}
       >
         <p>
-          Identifying your specific vehicle model ensures compatibility between
-          the charging station and your EV.
+          Understanding your preferences helps in recommending charging stations
+          with the desired functionality.
         </p>
       </HelperModal>
     </SurveyBase>
   );
 };
 
-export default Survey1;
+export default Survey6;
