@@ -10,13 +10,18 @@ import {
 import { useState, useCallback } from 'react';
 import { help } from 'ionicons/icons';
 import HelperModal from '../HelperModal';
+import { useHistory } from 'react-router-dom';
+
 const surveyOptions = ['Very important', 'Somewhat important', 'Not important'];
 
 const Survey7: React.FC = () => {
+  const history = useHistory();
+
   const [answer, setAnswer] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const nextButton = useCallback(() => {
+    history.push('/station');
     console.log(answer);
   }, [answer]);
 
@@ -26,7 +31,7 @@ const Survey7: React.FC = () => {
       title="Q7: Software Features 2/2"
       nextButtonDisabled={!answer}
       nextButtonOnClick={nextButton}
-      nextButtonText='Finish'
+      nextButtonText="Finish"
     >
       <IonItem color="primary" className="item-text-wrap">
         <IonLabel>

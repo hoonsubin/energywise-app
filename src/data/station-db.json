@@ -1,0 +1,504 @@
+[
+    {
+      "name": "Terra AC Wallbox",
+      "image": "https://www07.abb.com/images/librariesprovider107/default-album/terra_ac_wallbox_pr_newplug.jpg?sfvrsn=6a2f170a_1",
+      "purchaseLink": "",
+      "provider": "ABB Ltd",
+      "description": "This is the single phase charging station kit from ABB.",
+      "features": ["wireless", "wlan", "4g"
+        ],
+      "priceRange": [
+            30.5,
+            69
+        ],
+      "energy": {
+        "power": [
+          3.7,
+          7.4
+        ],
+        "voltage": [
+          184,
+          276
+        ],
+        "phase": "single"
+        },
+      "size": {
+        "height": 320,
+        "width": 195,
+        "depth": 143,
+        "weight": 30,
+        "cableLength": 5
+        }
+    },
+    {
+      "name": "Terra AC Wallbox",
+      "image": "https://www07.abb.com/images/librariesprovider107/default-album/terra_ac_wallbox_pr_newplug.jpg?sfvrsn=6a2f170a_1",
+      "purchaseLink": "",
+      "provider": "ABB Ltd",
+      "description": "This is the three phase charging station kit from ABB.",
+      "features": ["wireless", "wlan", "4g"
+        ],
+      "priceRange": [
+            30.5,
+            69
+        ],
+        "energy": {
+          "power": [
+            7.4,
+            14.8
+          ],
+          "voltage": [
+            320,
+            480
+          ],
+          "phase": "three"
+          },
+        "size": {
+          "height": 320,
+          "width": 195,
+          "depth": 143,
+          "weight": 30,
+          "cableLength": 5
+          }
+    },
+    {
+      "name": "ID Charger",
+      "image": "https://www.elli.eco/cdn/zEVvVNsJlrIReGW3wpNnrb3Q1Iw/bsHx6jc5ZVTiN8t0RQCuuSxsWeeJaIwgg5Fy1OcJLbc/5f22667768fd8e5cfcbcfdbe/5f316d876730a4086293f6c0_aufriss_gesamt.png",
+      "purchaseLink": "",
+      "provider": "Elli.eco",
+      "description": "This is the charging station kit from Eli Eco.",
+      "features": ["no wireless", "no wlan", "no 4g"
+        ],
+      "priceRange": [
+            30.5,
+            69
+        ],
+      "energy": {
+        "power": 7.4,
+        "voltage": 230,
+        "phase": "three"
+        },
+      "size": {
+        "height": 406,
+        "width": 297,
+        "depth": 116,
+        "weight": 6,
+        "cableLength": [
+                4.5,
+                7
+            ]
+        }
+    },
+    
+    {
+      "name": "ID Charger Connect",
+      "image": "https://www.elli.eco/cdn/zEVvVNsJlrIReGW3wpNnrb3Q1Iw/bsHx6jc5ZVTiN8t0RQCuuSxsWeeJaIwgg5Fy1OcJLbc/5f22667768fd8e5cfcbcfdbe/5f316d876730a4086293f6c0_aufriss_gesamt.png",
+      "purchaseLink": "",
+      "provider": "Elli.eco",
+      "description": "This is the charging station kit from Eli Eco with connectivity.",
+      "features": ["wireless", "wlan", "4g", "bluetooth"
+        ],
+      "priceRange": [
+            30.5,
+            69
+        ],
+      "energy": {
+        "power": 7.4,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 406,
+        "width": 297,
+        "depth": 116,
+        "weight": 6,
+        "cableLength": [
+                4.5,
+                7
+            ]
+        }
+    },
+  
+    {
+      "name": "ID Charger Connect Pro",
+      "image": "https://www.elli.eco/cdn/zEVvVNsJlrIReGW3wpNnrb3Q1Iw/bsHx6jc5ZVTiN8t0RQCuuSxsWeeJaIwgg5Fy1OcJLbc/5f22667768fd8e5cfcbcfdbe/5f316d876730a4086293f6c0_aufriss_gesamt.png",
+      "purchaseLink": "",
+      "provider": "Elli.eco",
+      "description": "This is the Pro charging station kit from Eli Eco with connectivity.",
+      "features": ["wireless", "wlan", "4g", "bluetooth"
+        ],
+      "priceRange": [
+            30.5,
+            69
+        ],
+      "energy": {
+        "power": 7.4,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 406,
+        "width": 297,
+        "depth": 116,
+        "weight": 6,
+        "cableLength": [
+                4.5,
+                7
+            ]
+        }
+    },
+    
+    {
+      "name": "EV Box Livo",
+      "image": "https://evbox.com/assets/img/novo/product-inquiry-form/images/recommendations/pif_recommendation-livo-cable.jpg",
+      "purchaseLink": "",
+      "provider": "EV Box",
+      "description": "This is the single phase EV Box Livo station kit from EV Box with connectivity.",
+      "features": ["wireless", "wlan", "4g", "bluetooth"
+        ],
+      "priceRange": [
+            30.5,
+            69
+        ],
+      "energy": {
+        "power": 11,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 366,
+        "width": 250,
+        "depth": 177,
+        "weight": 6,
+        "cableLength": 6
+        }
+    },
+   
+    {
+      "name": "EV Box Elvi",
+      "image": "https://evbox.com/assets/img/novo/product-inquiry-form/images/recommendations/pif_recommendation-elvi-cable.jpg",
+      "purchaseLink": "",
+      "provider": "EV Box",
+      "description": "This is the single phase EV Box Elvi station kit from EV Box with connectivity.",
+      "features": ["wireless", "wlan", "4g", "bluetooth"
+        ],
+      "priceRange": [
+            30.5,
+            69
+        ],
+      "energy": {
+        "power": 11,
+        "voltage": 400,
+        "phase": "single"
+        },
+      "size": {
+        "height": 328,
+        "width": 186,
+        "depth": 161,
+        "weight": 7,
+        "cableLength": 6
+        }
+    },
+    
+    {
+      "name": "Heidelberg Wallbox Eco 11 kW",
+      "image": "https://www.heidelberg-wallbox.eu/media/image/86/39/be/Unbenannt-2_600x600.jpg",
+      "purchaseLink": "",
+      "provider": "Heidelberg Wallbox",
+      "description": "This is the single phase Heidelberg Wallbox Eco 11 kW charging station kit from Heidelberg Wallbox Eco with no connectivity.",
+      "features": ["no wireless", "no wlan", "no 4g", "no bluetooth"
+        ],
+      "priceRange": [
+            445,
+            535
+        ],
+      "energy": {
+        "power": 3.68,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 386,
+        "width": 295,
+        "depth": 117,
+        "weight": 11.5,
+        "cableLength": [
+                3.5,
+                7.5
+            ]
+        }
+    },
+    
+    {
+      "name": "Heidelberg Wallbox Eco 11 kW Stainless Steel",
+      "image": "https://www.heidelberg-wallbox.eu/media/image/f0/62/2f/Wallbox-Stele_03_600x600-2x_600x600.jpg",
+      "purchaseLink": "",
+      "provider": "Heidelberg Wallbox",
+      "description": "This is the single phase Heidelberg Wallbox Eco 11 kW Stainless Steel charging station kit from Heidelberg Wallbox Eco with no connectivity.",
+      "features": ["no wireless", "no wlan", "no 4g", "no bluetooth"
+        ],
+      "priceRange": [
+            834.92,
+            922.17
+        ],
+      "energy": {
+        "power": 3.68,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 386,
+        "width": 295,
+        "depth": 117,
+        "weight": 11.5,
+        "cableLength": [
+                3.5,
+                7.5
+            ]
+        }
+    },
+    
+    {
+      "name": "Heidelberg Wallbox Energy Control 11 kW",
+      "image": "https://www.heidelberg-wallbox.eu/media/image/ee/c9/3a/Hauptbild_600x600.jpg",
+      "purchaseLink": "",
+      "provider": "Heidelberg Wallbox",
+      "description": "This is the single phase Heidelberg Wallbox Energy Control 11 kW charging station kit from Heidelberg Wallbox Eco with connectivity.",
+      "features": ["wireless", "wlan", "no 4g", "bluetooth"
+        ],
+      "priceRange": [
+            795.96,
+            841.21
+        ],
+      "energy": {
+        "power": 3.68,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 386,
+        "width": 295,
+        "depth": 117,
+        "weight": 11.5,
+        "cableLength": [
+                5,
+                7.5
+            ]
+        }
+    },
+    
+    {
+      "name": "EV Link Home",
+      "image": "https://download.schneider-electric.com/files?p_Doc_Ref=EVH4S03N2&p_File_Type=rendition_369_jpg&default_image=DefaultProductImage.png",
+      "purchaseLink": "",
+      "provider": "Schneider Electric",
+      "description": "This is the single phase EV Link Home charging station kit from Schneider Electric with no cable and no connectivity.",
+      "features": ["no wireless", "no wlan", "no 4g", "no bluetooth"
+        ],
+      "priceRange": [
+            69,
+            420
+        ],
+      "energy": {
+        "power": 3.7,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 409,
+        "width": 282,
+        "depth": 248,
+        "weight": 4.5,
+        "cableLength": 0
+        }
+    },
+    
+    {
+      "name": "EV Link Home (with cable)",
+      "image": "https://download.schneider-electric.com/files?p_Doc_Ref=EVH4S03N2&p_File_Type=rendition_369_jpg&default_image=DefaultProductImage.png",
+      "purchaseLink": "",
+      "provider": "Schneider Electric",
+      "description": "This is the single phase EV Link Home (with cable) charging station kit from Schneider Electric with cable and no connectivity.",
+      "features": ["no wireless", "no wlan", "no 4g", "no bluetooth"
+        ],
+      "priceRange": [
+            69,
+            420
+        ],
+      "energy": {
+        "power": 3.7,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 409,
+        "width": 282,
+        "depth": 248,
+        "weight": 4.5,
+        "cableLength": 5
+        }
+    },
+    
+    {
+      "name": "EV Link Home Smart",
+      "image": "https://download.schneider-electric.com/files?p_Doc_Ref=EVH4A07N4_Image1&p_File_Type=rendition_369_jpg&default_image=DefaultProductImage.png",
+      "purchaseLink": "",
+      "provider": "Schneider Electric",
+      "description": "This is the single phase EV Link Home Smart charging station kit from Schneider Electric with connectivity but no cable.",
+      "features": ["wireless", "wlan", "4g", "bluetooth"
+        ],
+      "priceRange": [
+            69,
+            420
+        ],
+      "energy": {
+        "power": 3.7,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 409,
+        "width": 282,
+        "depth": 248,
+        "weight": 4.5,
+        "cableLength": 0
+        }
+    },
+    
+    {
+      "name": "VersiCharge",
+      "image": "https://assets.new.siemens.com/siemens/assets/api/uuid:98a54783-6b81-4cb2-838d-f1eff08b8b34/width:1125/quality:high/versicharge-versions-iec-combined.png",
+      "purchaseLink": "",
+      "provider": "Siemens",
+      "description": "This is the single phase VersiCharge charging station kit from Siemens with connectivity.",
+      "features": ["wireless", "wlan", "4g", "no bluetooth"
+        ],
+      "priceRange": [
+            69,
+            420
+        ],
+      "energy": {
+        "power": 7.4,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 446,
+        "width": 180,
+        "depth": 178,
+        "weight": 7,
+        "cableLength": 0
+        }
+    },
+    
+    {
+      "name": "Tesla Gen 3 Wall Connector",
+      "image": "https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/CAR_ACCESSORIES/MODEL_S/CHARGING_ADAPTERS/1529455-02-D_0_2000.jpg",
+      "purchaseLink": "",
+      "provider": "Tesla",
+      "description": "This is the single phase Tesla Gen 3 Wall Connector charging station kit from Tesla with connectivity.",
+      "features": ["wireless", "wlan", "no 4g", "no bluetooth"
+        ],
+      "priceRange": [
+            500,
+            1000
+        ],
+      "energy": {
+        "power": 7.4,
+        "voltage": 230,
+        "phase": "single"
+        },
+      "size": {
+        "height": 345,
+        "width": 155,
+        "depth": 110,
+        "weight": 4.5,
+        "cableLength": 7
+        }
+    },
+    
+    {
+      "name": "Pulsar Plus",
+      "image": "https://wallbox.com/media/cms/pulsar/PulsarPlus0001_opt.jpg",
+      "purchaseLink": "",
+      "provider": "Wallbox",
+      "description": "This is the single phase Pulsar Plus charging station kit from Wallbox with connectivity.",
+      "features": ["wireless", "wlan", "no 4g", "bluetooth"
+        ],
+      "priceRange": [
+            69,
+            420
+        ],
+      "energy": {
+        "power": 7.4,
+        "voltage": 220,
+        "phase": "single"
+        },
+      "size": {
+        "height": 166,
+        "width": 163,
+        "depth": 82,
+        "weight": 1,
+        "cableLength": [
+              5,
+              7
+        ]
+        }
+    },
+    
+    {
+      "name": "Pulsar Max",
+      "image": "https://wallbox.com/media/landings/pulsar_plus_max/360/PULSARMAXCAMPAING_STUDIO_360_00075.jpg",
+      "purchaseLink": "",
+      "provider": "Wallbox",
+      "description": "This is the single phase Pulsar Max charging station kit from Wallbox with connectivity.",
+      "features": ["wireless", "wlan", "no 4g", "bluetooth"
+        ],
+      "priceRange": [
+            69,
+            420
+        ],
+      "energy": {
+        "power": 7.4,
+        "voltage": 220,
+        "phase": "single"
+        },
+      "size": {
+        "height": 166,
+        "width": 163,
+        "depth": 82,
+        "weight": 1,
+        "cableLength": [
+              5,
+              7
+        ]
+        }
+    },
+   
+    {
+      "name": "Quasar DC",
+      "image": "https://wallbox.com/media_usa/cms/landings/quasar2/Rectangle_53.png",
+      "purchaseLink": "",
+      "provider": "Wallbox",
+      "description": "This is the single phase Quasar DC charging station kit from Wallbox with ultimate connectivity.",
+      "features": ["wireless", "wlan", "4g", "bluetooth"
+        ],
+      "priceRange": [
+            69,
+            420
+        ],
+      "energy": {
+        "power": 7.4,
+        "voltage": 150,
+        "phase": "single"
+        },
+      "size": {
+        "height": 350,
+        "width": 350,
+        "depth": 150,
+        "weight": 15,
+        "cableLength": 5
+        }
+    }
+]
+  

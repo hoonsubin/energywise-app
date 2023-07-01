@@ -60,19 +60,23 @@ const TechnicianItem: React.FC<TechnicianItemProps> = (props) => {
               </IonRow>
               <IonRow>
                 <IonCardContent>
-                  <a
-                    target="_blank"
-                    href={props.itemData.website}
-                    rel="noopener noreferrer"
-                  >
-                    <IonText>
-                      <p>
-                        {' '}
-                        <IonIcon icon={laptopOutline} color="primary" />
-                        {props.itemData.website}
-                      </p>
-                    </IonText>
-                  </a>
+                  {props.itemData.website ? (
+                    <a
+                      target="_blank"
+                      href={props.itemData.website}
+                      rel="noopener noreferrer"
+                    >
+                      <IonText>
+                        <p>
+                          {' '}
+                          <IonIcon icon={laptopOutline} color="primary" />
+                          {props.itemData.website}
+                        </p>
+                      </IonText>
+                    </a>
+                  ) : (
+                    <IonText>No website available</IonText>
+                  )}
                 </IonCardContent>
               </IonRow>
             </IonCol>
