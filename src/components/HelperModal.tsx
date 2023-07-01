@@ -18,6 +18,7 @@ type HelperModalProps = {
 };
 
 const HelperModal: React.FC<HelperModalProps> = (props) => {
+
   const handleDismiss = useCallback(() => {
     console.log('clicked dismiss');
     props.onClickDismiss && props.onClickDismiss();
@@ -29,6 +30,7 @@ const HelperModal: React.FC<HelperModalProps> = (props) => {
         <IonToolbar>
           <IonTitle>{props.title}</IonTitle>
           <IonButtons slot="end">
+            {/* todo: Fix the button behavior. For some reason clicking this won't do anything */}
             <IonButton onClick={handleDismiss}>Close</IonButton>
           </IonButtons>
         </IonToolbar>
@@ -37,6 +39,7 @@ const HelperModal: React.FC<HelperModalProps> = (props) => {
         {Array.isArray(props.children)
           ? props.children.map((e) => e)
           : props.children}
+        <IonButton onClick={handleDismiss}>Close</IonButton>
       </IonContent>
     </IonModal>
   );

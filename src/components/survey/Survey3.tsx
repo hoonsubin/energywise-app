@@ -63,7 +63,7 @@ const Survey3: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const nextButton = () => useCallback(() => {
+  const nextButton = useCallback(() => {
     console.log(answer);
   }, [answer]);
 
