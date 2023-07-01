@@ -60,8 +60,7 @@ const Survey1: React.FC = () => {
         isOpen={isModalOpen}
         title="Tips"
         onClickDismiss={() => {
-          console.log('closing');
-          setIsModalOpen(false);
+          setIsModalOpen(!isModalOpen);
         }}
       >
         <p>

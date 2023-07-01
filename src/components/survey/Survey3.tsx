@@ -15,10 +15,10 @@ import HelperModal from '../HelperModal';
 import Survey4 from './Survey4';
 
 const surveyOptions = [
-  '3,7 kW (100km in 4 hours 30 mins)',
-  '7,4 kW (100km in 2 hours 15 mins)',
-  '11 kW (100km in 1 hour 30 min)',
-  '22 kW (100km in 45 min)',
+  '3,7 kW',
+  '7,4 kW',
+  '11 kW',
+  '22 kW',
 ];
 
 const ChargerCalc = () => {

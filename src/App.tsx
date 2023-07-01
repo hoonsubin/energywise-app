@@ -11,6 +11,7 @@ import ChargingKitListPage from './pages/ChargingKitListPage';
 import TechnicianListPage from './pages/TechnicianListPage';
 import SurveyPage from './pages/SurveyPage';
 import ChargingKitDetailPage from './pages/ChargingKitDetailPage';
+import { createBrowserHistory } from 'history';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -33,10 +34,12 @@ import './theme/variables.css';
 
 setupIonicReact();
 
+const history = createBrowserHistory();
+
 const App: React.FC = () => {
   return (
     <IonApp>
-      <IonReactRouter>
+      <IonReactRouter history={history}>
         <IonSplitPane contentId="main">
           {/* Always show the menu on the side of the app */}
           <Menu />

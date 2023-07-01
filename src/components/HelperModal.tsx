@@ -8,6 +8,8 @@ import {
   IonToolbar,
 } from '@ionic/react';
 
+import { useCallback } from 'react';
+
 type HelperModalProps = {
   title: string;
   isOpen: boolean;
@@ -16,18 +18,18 @@ type HelperModalProps = {
 };
 
 const HelperModal: React.FC<HelperModalProps> = (props) => {
-  const handleDismiss = () => {
-    console.log('closing from modal');
+  const handleDismiss = useCallback(() => {
+    console.log('clicked dismiss');
     props.onClickDismiss && props.onClickDismiss();
-  };
+  }, [props.onClickDismiss]);
 
   return (
-    <IonModal isOpen={props.isOpen}>
+    <IonModal isOpen={props.isOpen} onIonModalDidDismiss={handleDismiss}>
       <IonHeader>
         <IonToolbar>
           <IonTitle>{props.title}</IonTitle>
           <IonButtons slot="end">
-            <IonButton onClick={() => handleDismiss()}>Close</IonButton>
+            <IonButton onClick={handleDismiss}>Close</IonButton>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
