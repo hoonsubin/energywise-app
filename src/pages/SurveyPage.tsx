@@ -1,37 +1,8 @@
-import {
-  IonButtons,
-  IonContent,
-  IonHeader,
-  IonLabel,
-  IonMenuButton,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/react';
+import { IonNav } from '@ionic/react';
+import SurveyIntro from '../components/survey/SurveyIntro';
 
-const pageTitle = 'Survey';
 const SurveyPage: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>{pageTitle}</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{pageTitle}</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonLabel>Implement the survey page</IonLabel>
-      </IonContent>
-    </IonPage>
-  );
+  return <IonNav root={() => <SurveyIntro />} />;
 };
 
 export default SurveyPage;

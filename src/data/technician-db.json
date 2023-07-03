@@ -1,0 +1,312 @@
+[
+    {
+      "name": "Göpfert Elektrotechnik GmbH",
+      "website":"https://www.elektro-goepfert.de/elektro/elektroinstallation",
+      "description":"Supports only ABL, Bals, Mennekes and Phoenix contact Charging Stations.",
+      "address": "Allacher Straße 233",
+      "postalCode": 80997,
+      "city": "Munich",
+      "phoneNo": "089/89224936",
+      "email": "info@elektro-goepfert.de"
+    },
+    {
+      "name": "daheim solar",
+      "website":"https://daheim-solar.de/wallboxen/",
+      "description":"Supports only E3/ DC multi connect II, Alpha ESS SMILE and Heidelberg Home Eco Charging Stations.",
+      "address": "Frankenthaler Straße 20",
+      "postalCode": 81539,
+      "city": "Munich",
+      "phoneNo": "089/231416666",
+      "email": "info@daheim-solar.de"
+    },
+    {
+      "name": "Pittroff Elektrotechnik München GmbH",
+      "website":"https://www.pittroff.de/elektrotechnik/ladestation-fuer-e-auto-e-mobilitaet-muenchen.html",
+      "description":"Supports only Mennekes Charging Stations.",
+      "address": "St.-Johann-Straße 44",
+      "postalCode": 80999,
+      "city": "Munich",
+      "phoneNo": "089/9901880",
+      "email": "info@pittroff.de"
+    },
+    {
+      "name": "KRAMMER",
+      "website":"https://www.krammer-technik.de",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Grillparzerstraße 14",
+      "postalCode": 81675,
+      "city": "Munich",
+      "phoneNo": "089/411898200",
+      "email": "info@krammer-technik.de"
+    },
+    {
+      "name": "ELSA cnc service GmbH",
+      "website":"http://www.elsa-service.de/cnc/elektrotechnik.php",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Ammerthalstraße 12",
+      "postalCode": 85551,
+      "city": "Munich",
+      "phoneNo": "089/9033812",
+      "email": "info@elsa-service.de"
+    },
+    {
+      "name": "CIF Elektrotechnik",
+      "website":"",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Selma-Lagerlöf-Strase 72",
+      "postalCode": 81829,
+      "city": "Munich",
+      "phoneNo": "089/81897798",
+      "email": "cif-elektrotechnik@t-online.de"
+    },
+    {
+      "name": "Johann Schröck & Co. GmbH",
+      "website":"http://www.elektro-schroeck.de",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Guffertstraße 17",
+      "postalCode": 81825,
+      "city": "Munich",
+      "phoneNo": "089/434123",
+      "email": "info@elektro-schroeck.de"
+    },
+    {
+      "name": "Elektro-Brummer GmbH & Co. KG",
+      "website":"https://www.elektro-brummer.de/produkte/",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Ständlerstr. 35",
+      "postalCode": 81549,
+      "city": "Munich",
+      "phoneNo": "089/402029",
+      "email": "info@elektro-brummer.de"
+    },
+    {
+      "name": "Elektro Berger",
+      "website":"",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Schlierseestr. 13",
+      "postalCode": 83735,
+      "city": "Bayrischzell",
+      "phoneNo": "0170/4833021",
+      "email": "elberger@t-online.de"
+    },
+    {
+      "name": "Elektroanlagen Werner Binder",
+      "website":"https://www.elektro-binder.com",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Oberföhringer Str. 206",
+      "postalCode": 81925,
+      "city": "Munich",
+      "phoneNo": "089/9576464",
+      "email": "info@elektro-binder.com"
+    },
+    {
+      "name": "Oktech GmbH",
+      "website":"https://oktech.de",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Kolomanstraße 2",
+      "postalCode": 85737,
+      "city": "Ismaning",
+      "phoneNo": "089/21546087",
+      "email": "kontakt@oktech.de"
+    },
+    {
+      "name": "Erich Weber GmbH",
+      "website":"https://www.erichweber-elektro.de",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Lerchenauer Str. 156",
+      "postalCode": 80935,
+      "city": "Munich",
+      "phoneNo": "089/3511237",
+      "email": "info@erichweber-elektro.de"
+    },
+    {
+      "name": "EMTech Elektrotechnik GmbH",
+      "website":"https://emtech-elektro.de/leistungen/",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Ludwig-Ganghofer-Straße 7",
+      "postalCode": 82031,
+      "city": "Grünwald",
+      "phoneNo": "089/27275992",
+      "email": "info@emtech-elektro.de"
+    },
+    {
+      "name": "Hans Loy GmbH",
+      "website":"https://emtech-elektro.de/leistungen/",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Landshuter Allee 51-53",
+      "postalCode": 80637,
+      "city": "Munich",
+      "phoneNo": "089/1306700",
+      "email": "mail@hans-loy-elektro.de"
+    },
+    {
+      "name": "Seemüller GmbH",
+      "website":"https://www.elektroseemueller.de/leistungen/",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Fürstenrieder Straße 84",
+      "postalCode": 80686,
+      "city": "Munich",
+      "phoneNo": "089/515649210",
+      "email": "info@elektroseemueller.de"
+    },
+    {
+      "name": "Seemüller GmbH",
+      "website":"https://www.elektroseemueller.de/leistungen/",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Fürstenrieder Straße 84",
+      "postalCode": 80686,
+      "city": "Munich",
+      "phoneNo": "089/515649210",
+      "email": "info@elektroseemueller.de"
+    },
+    {
+      "name": "Meklif Elektrotechnik",
+      "website":"https://meklif-elektrotechnik.de",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Lerchenstraße 5",
+      "postalCode": 80995,
+      "city": "Munich",
+      "phoneNo": "089/24598869",
+      "email": "info@meklif-elektrotechnik.de"
+    },
+    {
+      "name": "Hans-Jürgen Zierer Gebäude- und Systemtechnik",
+      "website":"https://www.zierer.biz/elektromobilität.html",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Landsbergerstr. 392",
+      "postalCode": 81241,
+      "city": "Munich",
+      "phoneNo": "089/57949390",
+      "email": "h.zierer@zierer.biz"
+    },
+    {
+      "name": "saller ELEKTROTECHNIK GmbH & Co. KG",
+      "website":"http://www.saller.eu/leistungen.html",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Lochhamer Schlag 10b",
+      "postalCode": 82166,
+      "city": "Gräfelfing",
+      "phoneNo": "089/8989954-0",
+      "email": "info@saller.eu"
+    },
+    {
+      "name": "Elektro Fernando Müller",
+      "website":"https://www.elektromeister-mueller.com/Leistungen/",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Bodenseestraße 291",
+      "postalCode": 81249,
+      "city": "Munich",
+      "phoneNo": "089/54638534",
+      "email": "elektro.f.mueller@gmail.com"
+    },
+    {
+      "name": "Elektro Moritz",
+      "website":"https://www.elektromoritz.de/dienstleistungen/",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Schwarzhölzlstraße 45",
+      "postalCode": 85757,
+      "city": "Karlsfeld",
+      "phoneNo": "08131/614163",
+      "email": "info@elektromoritz.de"
+    },
+    {
+      "name": "Elektro Rainer",
+      "website":"https://www.elektro-rainer.de/leistungen/photovoltaiktechnik-e-mobilität/",
+      "description":"Supports only Senec, E3/DC and Solar Edge Charging Stations.",
+      "address": "Ledererstr. 11",
+      "postalCode": 82131,
+      "city": "Gauting",
+      "phoneNo": "089/89308360",
+      "email": "Elektro-Rainer@t-online.de"
+    },
+    {
+      "name": "Mangelkramer Elektrotechnik",
+      "website":"",
+      "description":"Supports only Senec, E3/DC and Solar Edge Charging Stations.",
+      "address": "Bruckerstraße 26",
+      "postalCode": 85221,
+      "city": "Dachau",
+      "phoneNo": "0152/34178155",
+      "email": "info@Mangelkramer-Elektrotechnik.de"
+    },
+    {
+      "name": "Robert Döllner GmbH",
+      "website":"https://www.doellner-elektro.de/leistungen/",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Burgweg 4",
+      "postalCode": 82110,
+      "city": "Germering",
+      "phoneNo": "089/842558",
+      "email": "heindl.doellner@t-online.de"
+    },
+    {
+      "name": "Elektro Alfred Schwarzensteiner & Sohn GmbH",
+      "website":"https://elektro-schwarzensteiner.de/unsere-leistungen/#section-82-76",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Wendelsteinstr. 4",
+      "postalCode": 82194,
+      "city": "Gröbenzell",
+      "phoneNo": "08142/570375",
+      "email": "a.schwarzensteiner@elektro-schwarzensteiner.de"
+    },
+    {
+      "name": "NET Elektrotechnik",
+      "website":"https://nerbl.com/leistungen/",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Kreuzstraße 9",
+      "postalCode": 82178,
+      "city": "Puchheim",
+      "phoneNo": "089/80072052",
+      "email": "info@nerbl.com"
+    },
+    {
+      "name": "Ahmet Kula Elektrotechnik",
+      "website":"",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Am Georgenbach 2",
+      "postalCode": 82319,
+      "city": "Starnberg",
+      "phoneNo": "08151/444689",
+      "email": "kula-elektrotechnik@t-online.de"
+    },
+    {
+      "name": "Elektro Hanol",
+      "website":"http://elektro.hanol.de",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Unterweilbacher Straße 19",
+      "postalCode": 85244,
+      "city": "Röhrmoos",
+      "phoneNo": "08139/8392",
+      "email": "mail@hanol.de"
+    },
+    {
+      "name": "Elektroservice Huber",
+      "website":"http://www.huber-elektrotechnik.de",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Bürgermeister-Handel 19",
+      "postalCode": 82223,
+      "city": "Eichenau",
+      "phoneNo": "08141/37335",
+      "email": "elektro@elektroservice-huber.de"
+    },
+    {
+      "name": "AVHz GmbH",
+      "website":"",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Neuhausen 2",
+      "postalCode": 84431,
+      "city": "Rattenkirchen",
+      "phoneNo": "08086/7704022",
+      "email": "christoph.steinberger@avhz.de"
+    },
+    {
+      "name": "Elektroanlagen Thomas Laböck",
+      "website":"",
+      "description":"Supports all kind of Charging Stations.",
+      "address": "Kesselseestr. 4",
+      "postalCode": 83093,
+      "city": "Bad Endorf",
+      "phoneNo": "08053/2126",
+      "email": "elektro@laboeck.de"
+    }
+  ]
