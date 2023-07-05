@@ -45,23 +45,20 @@ const App: React.FC = () => {
           <Menu />
           {/* Route the pages based on the URL */}
           <IonRouterOutlet id="main">
-            <Route path="/" exact>
-              <Redirect to="/survey" />
+            <Route path="/station/detail/:id">
+              <ChargingKitDetailPage />
+            </Route>
+            <Route path="/technicians">
+              <TechnicianListPage />
             </Route>
             <Route path="/station" exact>
               <ChargingKitListPage />
             </Route>
-            <Route path="/station/detail/:id">
-              <ChargingKitDetailPage />
-              {/* todo: add the details page */}
-            </Route>
-
-            {/* todo: need to create all pages */}
             <Route path="/survey">
               <SurveyPage />
             </Route>
-            <Route path="/technicians">
-              <TechnicianListPage />
+            <Route path="/" exact>
+              <Redirect to="/survey" />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
