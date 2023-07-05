@@ -8,9 +8,9 @@ import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import ChargingKitListPage from './pages/ChargingKitListPage';
+import ChargingKitDetailPage from './pages/ChargingKitDetailPage';
 import TechnicianListPage from './pages/TechnicianListPage';
 import SurveyPage from './pages/SurveyPage';
-import ChargingKitDetailPage from './pages/ChargingKitDetailPage';
 import { createBrowserHistory } from 'history';
 
 /* Core CSS required for Ionic components to work properly */
@@ -45,15 +45,16 @@ const App: React.FC = () => {
           <Menu />
           {/* Route the pages based on the URL */}
           <IonRouterOutlet id="main">
-            <Route path="/station/detail/:id">
-              <ChargingKitDetailPage />
-            </Route>
             <Route path="/technicians">
               <TechnicianListPage />
             </Route>
-            <Route path="/station" exact>
+            <Route path="/station" exact={true}>
               <ChargingKitListPage />
+              
             </Route>
+            <Route path="/station/:id">
+                <ChargingKitDetailPage />
+              </Route>
             <Route path="/survey">
               <SurveyPage />
             </Route>

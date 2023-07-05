@@ -83,7 +83,7 @@ const ChargingKitItem: React.FC<ChargingKitItemProps> = (props) => {
                   shape="round"
                   fill="solid"
                   size="large"
-                  routerLink={'/station/detail/' + props.itemData.id}
+                  routerLink={'/station/' + props.itemData.id}
                 >
                   Details
                 </IonButton>
