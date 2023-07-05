@@ -11,16 +11,17 @@ import {
   IonGrid,
   IonCol,
   IonRow,
-  IonImg,
   IonChip,
   IonLabel,
 } from '@ionic/react';
 import { ChargingKit } from '../types';
 import { flash, person } from 'ionicons/icons';
+import { useHistory } from 'react-router';
+import { useCallback } from 'react';
 
 type ChargingKitItemProps = {
   itemData: ChargingKit;
-};
+}
 
 const FeatureTags: React.FC<{ tags: string[] }> = (props) => {
   return (
@@ -33,6 +34,16 @@ const FeatureTags: React.FC<{ tags: string[] }> = (props) => {
 };
 
 const ChargingKitItem: React.FC<ChargingKitItemProps> = (props) => {
+  const history = useHistory();
+
+  const handleDetailsButton = useCallback(() => {
+    history.push('/station/' + props.itemData.id);
+  }, [history]);
+
+  const handleTechButton = useCallback(() => {
+    history.push('/technicians');
+  }, [history]);
+
   return (
     <IonItem>
       {/* todo: make the card size stretch across the page (fixed width) */}
@@ -79,32 +90,42 @@ const ChargingKitItem: React.FC<ChargingKitItemProps> = (props) => {
                 </IonCardContent>
               </IonRow>
               <IonButton
-                  color="primary"
-                  shape="round"
-                  fill="solid"
-                  size="large"
-                  routerLink={'/station/detail/' + props.itemData.id}
-                >
-                  Details
-                </IonButton>
-                <IonButton
-                  color="secondary"
-                  shape="round"
-                  size="large"
-                  fill="outline"
-                  routerLink="/technicians"
-                >
-                  Technicians
-                </IonButton>
+                color="primary"
+                shape="round"
+                fill="solid"
+                size="large"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleDetailsButton();
+                }}
+              >
+                Details
+              </IonButton>
+              <IonButton
+                color="secondary"
+                shape="round"
+                size="large"
+                fill="outline"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleTechButton();
+                }}
+              >
+                Technicians
+              </IonButton>
             </IonCol>
 
             <IonCol>
               {/* todo: fix the image size and position so it's fluid */}
-              <img style={{
-                borderRadius: '8px',
-                maxWidth: '100%',
-                height: '50%'
-              }} src={props.itemData.image} alt="station image"></img>
+              <img
+                style={{
+                  borderRadius: '8px',
+                  maxWidth: '100%',
+                  height: '50%',
+                }}
+                src={props.itemData.image}
+                alt="station image"
+              ></img>
             </IonCol>
           </IonRow>
         </IonGrid>

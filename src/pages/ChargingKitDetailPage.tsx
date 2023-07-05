@@ -157,11 +157,8 @@ const ChargingKitDetailPage: React.FC<ChargingKitListPageProps> = (props) => {
           <IonRow>
             <IonCol>
               <IonText>
-                <h3>Specialty</h3>
+                <h3>Description</h3>
               </IonText>
-            </IonCol>
-            <IonCol>
-              <IonChip>Your mom</IonChip>
             </IonCol>
           </IonRow>
           <IonRow>

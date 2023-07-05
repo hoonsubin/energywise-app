@@ -4,13 +4,13 @@ import {
   IonSplitPane,
   setupIonicReact,
 } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
+import { IonReactHashRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import ChargingKitListPage from './pages/ChargingKitListPage';
+import ChargingKitDetailPage from './pages/ChargingKitDetailPage';
 import TechnicianListPage from './pages/TechnicianListPage';
 import SurveyPage from './pages/SurveyPage';
-import ChargingKitDetailPage from './pages/ChargingKitDetailPage';
 import { createBrowserHistory } from 'history';
 
 /* Core CSS required for Ionic components to work properly */
@@ -39,33 +39,30 @@ const history = createBrowserHistory();
 const App: React.FC = () => {
   return (
     <IonApp>
-      <IonReactRouter history={history}>
+      <IonReactHashRouter>
         <IonSplitPane contentId="main">
           {/* Always show the menu on the side of the app */}
           <Menu />
           {/* Route the pages based on the URL */}
           <IonRouterOutlet id="main">
-            <Route path="/" exact>
-              <Redirect to="/survey" />
+            <Route path="/technicians">
+              <TechnicianListPage />
+            </Route>
+            <Route path="/station/:id">
+              <ChargingKitDetailPage />
             </Route>
             <Route path="/station" exact>
               <ChargingKitListPage />
             </Route>
-            <Route path="/station/detail/:id">
-              <ChargingKitDetailPage />
-              {/* todo: add the details page */}
-            </Route>
-
-            {/* todo: need to create all pages */}
-            <Route path="/survey" exact>
+            <Route path="/survey">
               <SurveyPage />
             </Route>
-            <Route path="/technicians" exact>
-              <TechnicianListPage />
+            <Route path="/" exact>
+              <Redirect to="/survey" />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
-      </IonReactRouter>
+      </IonReactHashRouter>
     </IonApp>
   );
 };
