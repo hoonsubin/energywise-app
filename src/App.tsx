@@ -39,7 +39,7 @@ const history = createBrowserHistory();
 const App: React.FC = () => {
   return (
     <IonApp>
-      <IonReactHashRouter history={history}>
+      <IonReactHashRouter>
         <IonSplitPane contentId="main">
           {/* Always show the menu on the side of the app */}
           <Menu />
