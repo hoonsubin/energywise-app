@@ -50,11 +50,10 @@ const App: React.FC = () => {
             </Route>
             <Route path="/station" exact={true}>
               <ChargingKitListPage />
-              
             </Route>
             <Route path="/station/:id">
-                <ChargingKitDetailPage />
-              </Route>
+              <ChargingKitDetailPage />
+            </Route>
             <Route path="/survey">
               <SurveyPage />
             </Route>
