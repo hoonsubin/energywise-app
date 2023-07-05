@@ -4,7 +4,7 @@ import {
   IonSplitPane,
   setupIonicReact,
 } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
+import { IonReactHashRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import ChargingKitListPage from './pages/ChargingKitListPage';
@@ -39,7 +39,7 @@ const history = createBrowserHistory();
 const App: React.FC = () => {
   return (
     <IonApp>
-      <IonReactRouter history={history}>
+      <IonReactHashRouter history={history}>
         <IonSplitPane contentId="main">
           {/* Always show the menu on the side of the app */}
           <Menu />
@@ -48,12 +48,12 @@ const App: React.FC = () => {
             <Route path="/technicians">
               <TechnicianListPage />
             </Route>
-            <Route path="/station">
+            <Route path="/station/:id">
+              <ChargingKitDetailPage />
+            </Route>
+            <Route path="/station" exact>
               <ChargingKitListPage />
             </Route>
-            {/* <Route path="/station/:id">
-              <ChargingKitDetailPage />
-            </Route> */}
             <Route path="/survey">
               <SurveyPage />
             </Route>
@@ -62,7 +62,7 @@ const App: React.FC = () => {
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
-      </IonReactRouter>
+      </IonReactHashRouter>
     </IonApp>
   );
 };
