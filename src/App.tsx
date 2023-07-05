@@ -57,10 +57,10 @@ const App: React.FC = () => {
             </Route>
 
             {/* todo: need to create all pages */}
-            <Route path="/survey" exact>
+            <Route path="/survey">
               <SurveyPage />
             </Route>
-            <Route path="/technicians" exact>
+            <Route path="/technicians">
               <TechnicianListPage />
             </Route>
           </IonRouterOutlet>
