@@ -48,12 +48,12 @@ const App: React.FC = () => {
             <Route path="/technicians">
               <TechnicianListPage />
             </Route>
-            <Route path="/station" exact={true}>
+            <Route path="/station">
               <ChargingKitListPage />
             </Route>
-            <Route path="/station/:id">
+            {/* <Route path="/station/:id">
               <ChargingKitDetailPage />
-            </Route>
+            </Route> */}
             <Route path="/survey">
               <SurveyPage />
             </Route>

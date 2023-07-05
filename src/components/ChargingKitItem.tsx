@@ -16,10 +16,10 @@ import {
 } from '@ionic/react';
 import { ChargingKit } from '../types';
 import { flash, person } from 'ionicons/icons';
-import { RouteComponentProps, useHistory } from 'react-router';
+import { useHistory } from 'react-router';
 import { useCallback } from 'react';
 
-interface ChargingKitItemProps extends RouteComponentProps<{ id: string }> {
+type ChargingKitItemProps = {
   itemData: ChargingKit;
 }
 
@@ -36,15 +36,13 @@ const FeatureTags: React.FC<{ tags: string[] }> = (props) => {
 const ChargingKitItem: React.FC<ChargingKitItemProps> = (props) => {
   const history = useHistory();
 
-  const itemId = props.match.params.id;
-
   const handleDetailsButton = useCallback(() => {
-    history.push('/station/' + itemId);
+    history.push('/station/' + props.itemData.id);
   }, [history]);
 
   const handleTechButton = useCallback(() => {
     history.push('/technicians');
-  }, [history])
+  }, [history]);
 
   return (
     <IonItem>
@@ -98,7 +96,7 @@ const ChargingKitItem: React.FC<ChargingKitItemProps> = (props) => {
                 size="large"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleDetailsButton
+                  handleDetailsButton();
                 }}
               >
                 Details
